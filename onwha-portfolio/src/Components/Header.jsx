@@ -1,0 +1,109 @@
+import { Link, NavLink, useLocation } from "react-router-dom";
+import "../Styles/header.css";
+
+function Header() {
+  const location = useLocation();
+
+  const pathname =
+    location.pathname.toLowerCase().replace(/\/+$/, "") || "/";
+
+  const headerThemes = {
+
+    "/project/artroad": {
+      backgroundColor: "#d62828",
+      textColor: "#ffffff",
+    },
+
+    "/project/goyo": {
+      backgroundColor: "#D5E9F2",
+      textColor: "#ffffff",
+    },
+
+    "/project/meet-me": {
+      backgroundColor: "#000000",
+      textColor: "#ffffff",
+    },
+
+    // 나중에 프로젝트가 추가되면 아래처럼 추가
+    // "/project/project4": {
+    //   backgroundColor: "#색상코드",
+    //   textColor: "#ffffff",
+    // },
+
+    // "/project/project5": {
+    //   backgroundColor: "#색상코드",
+    //   textColor: "#ffffff",
+    // },
+  };
+
+  const defaultTheme = {
+    backgroundColor: "#ffffff",
+    textColor: "#000000",
+  };
+
+  const currentTheme = headerThemes[pathname] || defaultTheme;
+
+  return (
+    <header
+      className="site-header"
+      style={{
+        backgroundColor: currentTheme.backgroundColor,
+        color: currentTheme.textColor,
+      }}
+    >
+      <Link to="/" className="site-logo">
+        Onhwa
+      </Link>
+
+      <nav className="site-nav">
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          HOME
+        </NavLink>
+
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          ABOUT
+        </NavLink>
+
+        <NavLink
+          to="/works"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          WORK
+        </NavLink>
+
+        <NavLink
+          to="/awards"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          AWARDS
+        </NavLink>
+
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          CONTACT
+        </NavLink>
+      </nav>
+    </header>
+  );
+}
+
+export default Header;

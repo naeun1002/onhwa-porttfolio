@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page-container {
+  width: calc(100% - 48px);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px 40px 10px;
+  
+}

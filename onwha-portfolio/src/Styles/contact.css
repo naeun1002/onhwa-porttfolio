@@ -1,0 +1,45 @@
+.contact-page {
+  min-height: 80vh;
+}
+
+.contact-info {
+  margin-top: 100px;
+  max-width: 700px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+
+  padding: 22px 0;
+  border-bottom: 1px solid black;
+}
+
+.contact-item span {
+  font-weight: 600;
+}
+
+.contact-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    margin-top: 40px;
+  }
+
+  .contact-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .contact-message {
+    margin-bottom: 40px;
+    font-size: 17px;
+  }
+}

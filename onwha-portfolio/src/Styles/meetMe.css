@@ -1,0 +1,471 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.meetMe-page {
+  --meet-bg: black;
+  --meet-blue: #a8d7e8;
+  --meet-white: #f5f5f5;
+
+  width: 100%;
+  height: calc(100vh - 120px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  background-color: var(--meet-bg);
+  color: var(--meet-white);
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+}
+
+.meetMe-first-page,
+.meetMe-second-page,
+.meetMe-third-page,
+.meetMe-fourth-page,
+.meetMe-fifth-page {
+  position: relative;
+
+  width: 100%;
+  min-height: calc(100vh - 120px);
+
+  padding: 70px 5vw 86px;
+  box-sizing: border-box;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  background-color: var(--meet-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.meetMe-first-page {
+  display: flex;
+  align-items: center;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.9) 24%,
+      rgba(0, 0, 0, 0.65) 45%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.05) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.05) 65%,
+      rgba(0, 0, 0, 0.58) 100%
+    ),
+    url("/images/award1.png");
+
+  background-size: cover;
+  background-position: 62% center;
+  background-repeat: no-repeat;
+}
+
+.meetMe-first-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(720px, 50vw);
+  max-width: 720px;
+}
+
+.meetMe-award-label {
+  margin: 0 0 48px;
+
+  color: var(--meet-blue);
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  word-break: keep-all;
+}
+
+.meetMe-first-page .project-name {
+  color: white;
+  font-size: 32px;
+}
+
+.meetMe-summary {
+  max-width: 620px;
+  margin: 36px 0 0;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+
+.meetMe-second-page,
+.meetMe-third-page,
+.meetMe-fourth-page {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  padding: 90px 72px 80px;
+
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+
+  align-content: center;
+  align-items: start;
+
+  column-gap: 80px;
+  row-gap: 76px;
+
+  background-color: black;
+  box-sizing: border-box;
+}
+
+.meetMe-second-page h1,
+.meetMe-third-page h1,
+.meetMe-fourth-page h1 {
+  grid-column: 1;
+  grid-row: 1;
+
+  margin: 0;
+
+  color: var(--meet-blue);
+
+  font-size: 48px;
+
+}
+
+.meetMe-second-page p,
+.meetMe-third-page p,
+.meetMe-fourth-page p {
+  grid-column: 1;
+  grid-row: 2;
+
+  max-width: none;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 15px;
+  line-height: 1.85;
+  word-break: keep-all;
+}
+
+
+.meetMe-gallery {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+
+  align-content: center;
+}
+
+.meetMe-gallery img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+  object-position: center;
+
+  background-color: #111;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.meetMe-gallery img:hover {
+  transform: scale(1.025);
+  filter: brightness(1.08);
+}
+
+.meetMe-still-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+
+.meetMe-still-image img {
+  display: block;
+  width: 100%;
+  max-height: 68vh;
+
+  object-fit: contain;
+}
+
+.meetMe-video-link {
+  grid-column: 2;
+  grid-row: 3;
+
+  justify-self: end;
+  align-self: start;
+
+  margin-top: 14px;
+
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+
+  position: relative;
+  z-index: 5;
+}
+
+/* Award 전체 영역 */
+.meetMe-award {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr 0.6fr;
+  column-gap: 60px;
+  align-items: end;
+
+  width: 100%;
+}
+
+
+/* 왼쪽 제목 */
+.meetMe-award h1 {
+  grid-column: 1;
+
+  margin: 0;
+  color: #c7e7f6;
+  font-size: clamp(42px, 4vw, 64px);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+.meetMe-award-text {
+  grid-column: 2;
+
+  margin: 0 0 2px;
+  max-width: 100%;
+
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+
+.meetMe-award-gallery {
+  grid-column: 1 / -1;
+
+  margin-top: 40px;
+  display: grid;
+
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1.4fr)
+    minmax(240px, 0.6fr);
+
+  gap: 14px;
+  width: 100%;
+  align-items: stretch;
+}
+
+
+.meetMe-award-gallery .gallery-item {
+  width: 100%;
+  height: clamp(360px, 29vw, 480px);
+
+  overflow: hidden;
+  background: transparent;
+}
+
+
+.meetMe-award-gallery .gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.meetMe-award-gallery .award-card img {
+  object-fit: cover;
+  object-position: center;
+  transform: none;
+}
+
+
+.meetMe-move {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(-50%);
+
+  color: var(--meet-blue);
+  text-decoration: none;
+}
+
+.meetMe-up {
+  top: 20px;
+}
+
+.meetMe-down {
+  bottom: 20px;
+}
+
+.meetMe-move span {
+  display: block;
+
+  width: 17px;
+  height: 17px;
+
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+
+.meetMe-down span {
+  transform: rotate(45deg);
+  animation: meetMeDown 1.45s ease-in-out infinite;
+}
+
+
+.meetMe-up span {
+  transform: rotate(225deg);
+  animation: meetMeUp 1.45s ease-in-out infinite;
+}
+
+@keyframes meetMeDown {
+  0%,
+  100% {
+    translate: 0 -3px;
+  }
+
+  50% {
+    translate: 0 7px;
+  }
+}
+
+@keyframes meetMeUp {
+  0%,
+  100% {
+    translate: 0 3px;
+  }
+
+  50% {
+    translate: 0 -7px;
+  }
+}
+
+/* =========================
+   모바일
+========================= */
+
+@media (max-width: 900px) {
+  .meetMe-page {
+    height: calc(100dvh - 90px);
+  }
+
+  .meetMe-first-page,
+  .meetMe-second-page,
+  .meetMe-third-page,
+  .meetMe-fourth-page,
+  .meetMe-fifth-page {
+    min-height: calc(100dvh - 90px);
+    padding: 70px 22px 80px;
+  }
+
+  .meetMe-first-page {
+    align-items: flex-end;
+
+    background-position: 68% center;
+  }
+
+  .meetMe-first-content {
+    width: 100%;
+  }
+
+  .meetMe-award-label {
+    margin-bottom: 28px;
+    font-size: 13px;
+  }
+
+  .meetMe-first-page .project-name {
+    font-size: clamp(52px, 15vw, 82px);
+    letter-spacing: -5px;
+  }
+
+  .meetMe-summary {
+    max-width: 90%;
+    margin-top: 25px;
+
+    font-size: 16px;
+  }
+
+  .meetMe-second-page,
+  .meetMe-third-page,
+  .meetMe-fourth-page,
+  .meetMe-fifth-page {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .meetMe-second-page h1,
+  .meetMe-third-page h1,
+  .meetMe-fourth-page h1 {
+    margin-bottom: 24px;
+  }
+
+  .meetMe-second-page p,
+  .meetMe-third-page p,
+  .meetMe-fourth-page p {
+    max-width: none;
+    margin-bottom: 35px;
+
+    font-size: 15px;
+  }
+
+  .meetMe-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .meetMe-award-text {
+    margin-bottom: 35px;
+  }
+
+  .meetMe-award-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    max-height: none;
+  }
+
+  .meetMe-award-gallery img:first-child {
+    grid-row: auto;
+  }
+}
