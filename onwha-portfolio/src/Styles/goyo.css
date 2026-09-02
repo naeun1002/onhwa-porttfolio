@@ -16,7 +16,8 @@
 .goyo-persona01,
 .goyo-persona02,
 .goyo-userNeed,
-.goyo-serviceDesign {
+.goyo-serviceDesign,
+.goyo-appDesign {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -2039,15 +2040,23 @@
 
 
 
+
+
+
+
+
+
 .goyo-serviceDesign {
   width: 100%;
-  min-height: auto;
-  height: auto;
-  padding: 20px 3.7vw 18px 2.4vw;
+  min-height: calc(100vh - 120px);
+  height: calc(100vh - 120px);
+
+  padding: 28px 4vw 22px;
   box-sizing: border-box;
+
   color: #202322;
   background-color: #f3f9f7;
-  border-left: 2px solid #f07d5a;
+
   overflow: hidden;
 }
 
@@ -2058,15 +2067,16 @@
 .goyo-serviceDesign-inner {
   width: 100%;
   height: 100%;
-  min-height: 0;
+
   display: flex;
   flex-direction: column;
 }
 
+
 .goyo-serviceDesign-heading {
   flex-shrink: 0;
+
   margin-bottom: 24px;
-  padding-left: 4px;
 }
 
 .goyo-serviceDesign-heading .goyo-title-02 {
@@ -2075,296 +2085,283 @@
 
 .goyo-serviceDesign-heading .goyo-title-02 h1 {
   margin: 0;
+
   padding-right: 0.12em;
   padding-bottom: 0.08em;
+
   font-size: 32px;
   font-weight: 750;
   line-height: 1.15;
   letter-spacing: -0.06em;
+
   overflow: visible;
 }
 
 .goyo-serviceDesign-heading > p {
-  margin: 18px 0 0;
+  margin: 8px 0 0;
+
   color: #8c9694;
-  font-size: 16px;
+
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.65;
   letter-spacing: -0.04em;
+
   word-break: keep-all;
 }
+
 
 .goyo-serviceDesign-content {
   flex: 1;
   min-height: 0;
+
   display: grid;
-  grid-template-columns: minmax(0, 1.9fr) minmax(300px, 0.9fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 2.15fr) minmax(300px, 1fr);
+
+  gap: 34px;
+  align-items: stretch;
 }
 
 .goyo-serviceDesign-left {
   min-width: 0;
+
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 
+
 .goyo-serviceDesign h3 {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
+
   color: #c0cecc;
+
   font-size: 15px;
   font-weight: 650;
   line-height: 1;
 }
 
+
 .goyo-brand-row {
+  width: 100%;
+
   display: grid;
-  grid-template-columns: 190px 190px minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: 140px 140px minmax(0, 1fr);
+
+  gap: 14px;
+  align-items: start;
 }
 
 .goyo-brand-block {
   min-width: 0;
 }
 
-.goyo-iconGrid,
-.goyo-appIcon,
-.goyo-logoConcept {
-  height: 160px;
-  border-radius: 18px;
-  background-color: rgba(255, 255, 255, 0.94);
-}
 
-.goyo-iconGrid {
-  position: relative;
+.goyo-iconGrid-box {
+  width: 140px;
+  height: 140px;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 160px;
-  border-radius: 18px;
-  border: 1px solid rgba(170, 176, 173, 0.34);
-  background: rgba(255, 255, 255, 0.72);
-  overflow: hidden;
+  justify-content: flex-start;
 }
 
 .goyo-iconGrid-img {
   display: block;
-  width: 100%;
-  max-width: 166px;
-  height: 116px;
+
+  width: 140px;
+  height: 140px;
+
+  margin: 0;
+
   object-fit: contain;
-  opacity: 0.98;
+}
+
+
+.goyo-appIcon-box {
+  width: 140px;
+  height: 140px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .goyo-appIcon-img {
   display: block;
-  width: 100%;
-  max-width: 110px;
-  height: auto;
-  margin: 0 auto;
+
+  width: 140px;
+  height: 140px;
+
+  margin: 0;
+
   object-fit: contain;
 }
 
-.goyo-iconGrid::before,
-.goyo-iconGrid::after,
-.goyo-iconGrid-circle,
-.goyo-iconGrid-line {
-  display: none;
-}
-
-/* 메인 로고 도형 */
-
-.goyo-brand-mark {
-  position: relative;
-  width: 120px;
-  height: 105px;
-}
-
-.goyo-brand-mark i,
-.goyo-brand-mark b {
-  position: absolute;
-  display: block;
-  bottom: 10px;
-}
-
-.goyo-brand-mark i {
-  left: 4px;
-  width: 69px;
-  height: 57px;
-  background-color: #61c4b4;
-  clip-path: polygon(0 28%, 32% 45%, 54% 0, 100% 100%, 45% 100%);
-}
-
-.goyo-brand-mark b {
-  right: 4px;
-  width: 79px;
-  height: 90px;
-  background-color: #55bda9;
-  clip-path: polygon(50% 0, 100% 72%, 42% 100%, 0 60%);
-}
-
-.goyo-brand-mark.is-grid {
-  z-index: 2;
-  opacity: 0.34;
-  transform: scale(0.85);
-}
-
-.goyo-appIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 로고 콘셉트 */
 
 .goyo-logoConcept {
-  padding: 32px 38px 24px;
+  width: 100%;
+  height: 140px;
+
+  padding: 10px 14px 8px;
+
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+
+  border-radius: 14px;
+
+  background-color: rgba(255, 255, 255, 0.94);
 }
 
 .goyo-logoFormula {
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 27px;
+
+  gap: 36px;
 }
 
 .goyo-formula-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+
+  gap: 5px;
 }
 
-.goyo-formula-item small {
+.goyo-formula-item img {
+  display: block;
+
+  width: 54px;
+  height: 44px;
+
+  object-fit: contain;
+}
+
+.goyo-formula-item span {
   color: #c0c6c4;
-  font-size: 11px;
+
+  font-size: 10px;
+  font-weight: 500;
 }
 
-.goyo-logoFormula > strong {
+.goyo-logoFormula > b {
   width: 18px;
   height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
+
   color: #ffffff;
   background-color: #d4dbd9;
-  text-align: center;
-  font-size: 13px;
-  line-height: 18px;
+
+  font-size: 12px;
+  font-weight: 600;
 }
 
-.goyo-folder-symbol {
-  position: relative;
-  width: 40px;
-  height: 27px;
-  border-radius: 4px;
-  background-color: #b2b9b7;
+.goyo-formula-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 82px;
+  height: 58px;
+
+  transform: translateY(-6px);
 }
 
-.goyo-folder-symbol::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 4px;
-  width: 17px;
-  height: 8px;
-  border-radius: 3px 3px 0 0;
-  background-color: #b2b9b7;
-}
+.goyo-formula-result img {
+  display: block;
 
-.goyo-mountain-symbol {
-  width: 46px;
-  height: 31px;
-  background-color: #b2b9b7;
-  clip-path: polygon(0 100%, 25% 50%, 40% 70%, 66% 0, 100% 100%);
-}
+  width: 82px;
+  height: 58px;
 
-.goyo-brand-mark.formula-result {
-  width: 90px;
-  height: 72px;
-  transform: scale(0.72);
+  object-fit: contain;
 }
 
 .goyo-logoConcept > p {
-  margin: 17px 0 0;
+  margin: 8px 0 0;
+
   color: #9ba4a2;
+
   text-align: center;
+
   font-size: 13px;
   font-weight: 600;
   line-height: 1.55;
 }
 
-/* 컬러 팔레트 */
 
 .goyo-color-block {
-  min-width: 0;
-}
+  width: 100%;
 
-.goyo-mainColors,
-.goyo-grayColors {
-  position: relative;
-  display: grid;
-  overflow: hidden;
+  margin-top: 34px;
 }
 
 .goyo-mainColors {
-  height: 160px;
-  grid-template-columns: 2.5fr 1fr 0.65fr 0.65fr;
-  border-radius: 13px;
+  position: relative;
+
+  width: 100%;
+  height: 130px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
 }
 
-.goyo-mainColors i,
-.goyo-grayColors i {
+.goyo-mainColors img {
   display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
 }
 
-.goyo-mainColor-label {
+.goyo-mainColors span {
   position: absolute;
-  z-index: 2;
-  top: 25px;
-  left: 30px;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 19px;
+
+  top: 18px;
+  left: 24px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 15px;
   font-weight: 700;
-}
-
-.goyo-mainColors .main01 {
-  background: linear-gradient(90deg, #3bb88e, #67c9c5);
-}
-
-.goyo-mainColors .main02 {
-  background-color: #73c7c6;
-}
-
-.goyo-mainColors .main03 {
-  background-color: #c7dde6;
-}
-
-.goyo-mainColors .main04 {
-  background-color: #3a96b3;
+  line-height: 1;
 }
 
 .goyo-grayColors {
-  height: 80px;
-  margin-top: 20px;
-  grid-template-columns: repeat(6, 1fr);
-  border-radius: 12px;
+  width: 100%;
+  height: 68px;
+
+  margin-top: 12px;
+
+  overflow: hidden;
+
   border: 1px solid #e8eceb;
+  border-radius: 14px;
 }
 
-.goyo-grayColors .gray01 { background-color: #ffffff; }
-.goyo-grayColors .gray02 { background-color: #f3f3f3; }
-.goyo-grayColors .gray03 { background-color: #b7b7b7; }
-.goyo-grayColors .gray04 { background-color: #999999; }
-.goyo-grayColors .gray05 { background-color: #474747; }
-.goyo-grayColors .gray06 { background-color: #111111; }
+.goyo-grayColors img {
+  display: block;
 
-/* 오른쪽 그래픽 */
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
+}
+
 
 .goyo-graphics {
   min-width: 0;
+
   display: flex;
   flex-direction: column;
 }
@@ -2372,65 +2369,191 @@
 .goyo-graphics-grid {
   flex: 1;
   min-height: 0;
+
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+
+  gap: 18px;
 }
 
 .goyo-graphic-card {
   position: relative;
-  min-height: 0;
-  height: 100%;
-  padding: 1px 1px 1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  overflow: hidden;
 
+  min-width: 0;
+  min-height: 0;
+
+  border-radius: 18px;
+
+  overflow: hidden;
 }
 
-.goyo-graphic-card h4,
-.goyo-graphic-card p,
 .goyo-graphic-image {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
 
 .goyo-graphic-card h4 {
   position: absolute;
+  z-index: 2;
+
   right: 0;
-  bottom: 80px;
+  bottom: 68px;
   left: 0;
+
   margin: 0;
+
   color: #5e746e;
+
+  text-align: center;
+
   font-size: 20px;
   font-weight: 750;
-  text-align: center;
+  line-height: 1;
+
   letter-spacing: -0.04em;
 }
 
 .goyo-graphic-card p {
   position: absolute;
+  z-index: 2;
+
   right: 0;
-  bottom: 18px;
+  bottom: 20px;
   left: 0;
+
   margin: 0;
+
   color: #80918c;
+
+  text-align: center;
+
   font-size: 12px;
   font-weight: 600;
-  text-align: center;
+
   letter-spacing: -0.03em;
 }
 
-.goyo-graphic-image {
-  display: block;
-  width: 90%;
-  height: 90%;
-  margin-top: -10px;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 18px rgba(34, 68, 58, 0.08));
+.goyo-appDesign {
+  position: relative;
+
+  width: 100%;
+  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0;
+
+  overflow: hidden;
+  background-color: #f3f9f7;
+  background-image:
+    radial-gradient(circle at 87% 18%, transparent 0 46px, rgba(74, 175, 184, 0.13) 47px 48px, transparent 49px),
+    radial-gradient(circle at 70% 38%, transparent 0 82px, rgba(87, 190, 194, 0.1) 83px 84px, transparent 85px),
+    radial-gradient(circle at 94% 72%, transparent 0 25px, rgba(64, 161, 181, 0.15) 26px 27px, transparent 28px),
+    radial-gradient(circle at 66% 78%, transparent 0 16px, rgba(102, 201, 187, 0.13) 17px 18px, transparent 19px);
 }
 
+.goyo-appDesign::before,
+.goyo-appDesign::after {
+  content: "";
+
+  position: absolute;
+  z-index: 0;
+
+  border: 1px solid rgba(65, 164, 179, 0.26);
+  border-radius: 50%;
+
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.goyo-appDesign::before {
+  top: 9%;
+  right: 7%;
+
+  width: 104px;
+  height: 104px;
+
+  background: radial-gradient(
+    circle at 34% 28%,
+    rgba(255, 255, 255, 0.95) 0 3%,
+    rgba(139, 223, 216, 0.12) 4% 14%,
+    rgba(64, 177, 187, 0.04) 46%,
+    transparent 72%
+  );
+
+  box-shadow:
+    0 16px 30px rgba(54, 157, 174, 0.14),
+    -245px 165px 0 -18px rgba(75, 177, 188, 0.24),
+    -145px 385px 0 -28px rgba(105, 196, 188, 0.28),
+    125px 285px 0 -20px rgba(60, 157, 181, 0.25),
+    -70px 545px 0 -14px rgba(91, 189, 184, 0.24);
+}
+
+.goyo-appDesign::after {
+  top: 45%;
+  right: 35%;
+
+  width: 196px;
+  height: 196px;
+
+  border-color: rgba(61, 161, 181, 0.24);
+  background: radial-gradient(
+    circle at 31% 25%,
+    rgba(255, 255, 255, 0.9) 0 2%,
+    rgba(126, 216, 216, 0.1) 3% 12%,
+    rgba(69, 174, 187, 0.03) 50%,
+    transparent 74%
+  );
+
+  box-shadow:
+    0 20px 38px rgba(66, 165, 178, 0.12),
+    225px -255px 0 -62px rgba(80, 174, 188, 0.25),
+    320px 180px 0 -66px rgba(82, 188, 184, 0.26),
+    -220px 185px 0 -72px rgba(66, 157, 181, 0.21),
+    105px 410px 0 -83px rgba(107, 199, 187, 0.23);
+}
+
+.goyo-appDesign img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.goyo-appDesign img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.goyo-appDesign img:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.goyo-appDesign img:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / 3;
+
+  width: 100%;
+  height: 110%;
+  justify-self: center;
+  align-self: center;
+  object-fit: contain;
+}

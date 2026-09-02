@@ -738,99 +738,175 @@ function Goyo() {
         </div>
       </section>
 
+
       <section className="goyo-serviceDesign">
         <div className="goyo-serviceDesign-inner">
+
           <div className="goyo-serviceDesign-heading">
-            <div className="goyo-title-02"><h1>Service Design</h1></div>
+            <div className="goyo-title-02">
+              <h1>Service Design</h1>
+            </div>
+
             <p>
-              고요는 산 위에 서서 마음을 다스리고 감정을 되새기는 시의 공간이라는 의미를 담고 있습니다.<br />
+              고요는 산 위에 서서 마음을 다스리고 감정을 되새기는 시의 공간이라는 의미를 담고 있습니다.
+              <br />
               색다른 독서를 경험하고자 하는 사용자를 위한 시집을 재구성하고 나만의 시집을 만들 수 있어요.
             </p>
           </div>
 
           <div className="goyo-serviceDesign-content">
+
             <div className="goyo-serviceDesign-left">
+
               <div className="goyo-brand-row">
+
                 <article className="goyo-brand-block goyo-iconGrid-block">
                   <h3>ICON GRID</h3>
-                  <div className="goyo-iconGrid">
-                    <img className="goyo-iconGrid-img" src="/images/goyoIconGrid.png" alt="고요 아이콘 그리드" />
+
+                  <div className="goyo-iconGrid-box">
+                    <img
+                      className="goyo-iconGrid-img"
+                      src="/images/goyoIconGrid.png"
+                      alt="고요 아이콘 그리드"
+                    />
                   </div>
                 </article>
 
                 <article className="goyo-brand-block goyo-appIcon-block">
                   <h3>APP ICON</h3>
-                  <img className="goyo-appIcon-img" src="/images/goyoAppIcon.png" alt="고요 앱 아이콘" />
+
+                  <div className="goyo-appIcon-box">
+                    <img
+                      className="goyo-appIcon-img"
+                      src="/images/goyoAppIcon.png"
+                      alt="고요 앱 아이콘"
+                    />
+                  </div>
                 </article>
 
                 <article className="goyo-brand-block goyo-logoConcept-block">
                   <h3>LOGO CONCEPT</h3>
+
                   <div className="goyo-logoConcept">
+
                     <div className="goyo-logoFormula">
+
                       <div className="goyo-formula-item">
-                        <span className="goyo-folder-symbol" />
-                        <small>Folder</small>
+                        <img
+                          src="/images/goyoLogoConceptFolder.png"
+                          alt="Folder"
+                        />
+                        <span>Folder</span>
                       </div>
-                      <strong>+</strong>
+
+                      <b>+</b>
+
                       <div className="goyo-formula-item">
-                        <span className="goyo-mountain-symbol" />
-                        <small>Mountain</small>
+                        <img
+                          src="/images/goyoLogoConceptMountain.png"
+                          alt="Mountain"
+                        />
+                        <span>Mountain</span>
                       </div>
-                      <strong>=</strong>
-                      <div className="goyo-brand-mark formula-result"><i /><b /></div>
+
+                      <b>=</b>
+
+                      <div className="goyo-formula-result">
+                        <img
+                          src="/images/goyoLogoConceptIcon.png"
+                          alt="고요 로고"
+                        />
+                      </div>
+
                     </div>
-                    <p>폴더와 산을 결합한 형상으로,<br />고요만의 정체성을 로고에 담아냈습니다.</p>
+
+                    <p>
+                      폴더와 산을 결합한 형상으로,
+                      <br />
+                      고요만의 정체성을 로고에 담아냈습니다.
+                    </p>
                   </div>
                 </article>
+
               </div>
 
               <article className="goyo-color-block">
                 <h3>COLOR</h3>
+
                 <div className="goyo-mainColors">
-                  <span className="goyo-mainColor-label">MAIN</span>
-                  <i className="main01" /><i className="main02" /><i className="main03" /><i className="main04" />
+                  <img
+                    src="/images/goyoColorSetMain.png"
+                    alt="고요 메인 컬러"
+                  />
+                  <span>MAIN</span>
                 </div>
+
                 <div className="goyo-grayColors">
-                  <i className="gray01" /><i className="gray02" /><i className="gray03" />
-                  <i className="gray04" /><i className="gray05" /><i className="gray06" />
+                  <img
+                    src="/images/goyoColorSetBlack.png"
+                    alt="고요 그레이 컬러"
+                  />
                 </div>
               </article>
+
             </div>
 
             <aside className="goyo-graphics">
               <h3>GRAPHICS</h3>
+
               <div className="goyo-graphics-grid">
-                <article className="goyo-graphic-card graphic-cloud">
-                  <img className="goyo-graphic-image" src="/images/goyoGraphicsGurung.png" alt="구릉 그래픽" />
+
+                <article className="goyo-graphic-card">
+                  <img
+                    className="goyo-graphic-image"
+                    src="/images/goyoGraphicsGurung.png"
+                    alt="구릉 그래픽"
+                  />
                   <h4>구릉</h4>
                   <p>감정이 다양한 시</p>
                 </article>
 
-                <article className="goyo-graphic-card graphic-highland">
-                  <img className="goyo-graphic-image" src="/images/goyoGraphicsGowon.png" alt="고원 그래픽" />
+                <article className="goyo-graphic-card">
+                  <img
+                    className="goyo-graphic-image"
+                    src="/images/goyoGraphicsGowon.png"
+                    alt="고원 그래픽"
+                  />
                   <h4>고원</h4>
                   <p>감정이 고조된 시</p>
                 </article>
 
-                <article className="goyo-graphic-card graphic-plain">
-                  <img className="goyo-graphic-image" src="/images/goyoGraphicsPyungwon.png" alt="평원 그래픽" />
+                <article className="goyo-graphic-card">
+                  <img
+                    className="goyo-graphic-image"
+                    src="/images/goyoGraphicsPyungwon.png"
+                    alt="평원 그래픽"
+                  />
                   <h4>평원</h4>
                   <p>감정이 안정된 시</p>
                 </article>
 
-                <article className="goyo-graphic-card graphic-mountainCard">
-                  <img className="goyo-graphic-image" src="/images/goyoGraphicsGosan.png" alt="고산 그래픽" />
+                <article className="goyo-graphic-card">
+                  <img
+                    className="goyo-graphic-image"
+                    src="/images/goyoGraphicsGosan.png"
+                    alt="고산 그래픽"
+                  />
                   <h4>고산</h4>
                   <p>급격한 변화가 있는 시</p>
                 </article>
+
               </div>
             </aside>
+
           </div>
         </div>
       </section>
 
       <section className="goyo-appDesign">
-
+        <img src="/images/goyoAppDesign01.png" alt="고요 앱 디자인" />
+        <img src="/images/goyoAppDesign02.png" alt="고요 앱 디자인" />
+        <img src="/images/goyoAppDesign03.png" alt="고요 앱 디자인" />
       </section>
 
       <section className="goyo-home">
