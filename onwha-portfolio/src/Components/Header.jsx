@@ -15,8 +15,8 @@ function Header() {
     },
 
     "/project/goyo": {
-      backgroundColor: "#D5E9F2",
-      textColor: "#ffffff",
+      backgroundColor: "#f3f9f7",
+      textColor: "#000000",
     },
 
     "/project/meet-me": {

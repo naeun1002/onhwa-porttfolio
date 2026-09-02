@@ -6,9 +6,7 @@ function Works() {
       <h1>Works</h1>
       <section className = "works-layout">
         <article className="works-project-1">
-          <div className="works-project-visual"><span className = "project-number">project 01</span>
-          <span className = "project-name">나를 마주하다</span>
-          "비슷한 영혼은 멀리서도 알아보고 인사를 나눈다."</div>
+          <div className="works-project-visual"><span className = "project-number">project 01</span><span className = "project-name">나를 마주하다</span>"비슷한 영혼은 멀리서도 알아보고 인사를 나눈다."</div>
           <div className="works-project-title">project01</div>
         </article>
         <article className="works-project-2">

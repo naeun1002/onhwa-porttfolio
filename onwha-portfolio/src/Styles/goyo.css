@@ -1,5 +1,2497 @@
 .goyo-page {
-    margin: 0;
-    padding: 0;
-    background-color: #D5E9F2;
+  width: 100%;
+  height: calc(100vh - 120px);
+  overflow-x: hidden;
+  overflow-y: auto !important;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  background-color: #f3f9f7;
+}
+
+
+.goyo-overview,
+.goyo-target,
+.goyo-fieldResearch {
+  scroll-snap-align: none !important;
+  scroll-snap-stop: normal !important;
+}
+
+.goyo-overview {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+
+  padding: 38px 5vw 0;
+  box-sizing: border-box;
+
+  color: #1b211f;
+  background-color: #f3f9f7;
+
+  overflow: hidden;
+}
+
+.goyo-page-title-01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: auto;
+
+  box-sizing: border-box;
+}
+
+.goyo-page-title-01 p,
+.goyo-title-02 h1 {
+  display: inline-block;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding-bottom: 0.12em;
+
+  font-size: 32px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.06em;
+
+  background: linear-gradient(
+    90deg,
+    #67afb4 0%,
+    #76b9b3 45%,
+    #94c9ae 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  overflow: visible;
+}
+
+.goyo-title-02 {
+  width: fit-content;
+  height: auto;
+
+  padding-bottom: 5px;
+
+  overflow: visible;
+}
+
+.goyo-intro-header {
+  position: relative;
+  z-index: 2;
+
+  width: fit-content;
+  max-width: 1100px;
+
+  margin: 20px auto 0;
+
+  color: #000000;
+
+  text-align: center;
+
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.05em;
+
+  word-break: keep-all;
+}
+
+.goyo-highlight {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+
+  display: inline-block;
+}
+
+.goyo-highlight::before {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  right: -6px;
+  bottom: 4px;
+  left: -6px;
+
+  height: 55%;
+
+  background-color: rgba(126, 205, 198, 0.654);
+}
+
+.goyo-intro-header .goyo-highlight::after {
+  content: "";
+
+  position: absolute;
+  z-index: -2;
+
+  top: 70% !important;
+  left: 15% !important;
+
+  width: 65px;
+  height: 65px;
+
+  border: 2px dashed rgba(103, 190, 183, 0.4);
+  border-radius: 50%;
+
+  transform: translate(45%, -60%);
+}
+
+.goyo-overview .goyo-intro-detail {
+  position: relative;
+  z-index: 3;
+
+  width: 90%;
+  max-width: 1450px;
+
+  margin: 28px auto 0 !important;
+
+  text-align: center;
+}
+
+.goyo-overview .goyo-intro-detail p {
+  margin: 0;
+
+  color: #9ba3a1;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: -0.04em;
+
+  word-break: keep-all;
+}
+
+.goyo-intro-quote01,
+.goyo-intro-quote02,
+.goyo-intro-quote03,
+.goyo-intro-quote04,
+.goyo-intro-quote05,
+.goyo-intro-quote06,
+.goyo-intro-quote07 {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  border-radius: 12px;
+
+  transform-origin: center;
+}
+
+.goyo-intro-quote01,
+.goyo-intro-quote02,
+.goyo-intro-quote03,
+.goyo-intro-quote04,
+.goyo-intro-quote05 {
+  height: 64px;
+  min-height: 0;
+
+  padding: 8px 52px;
+}
+
+.goyo-intro-quote01 p,
+.goyo-intro-quote02 p,
+.goyo-intro-quote03 p,
+.goyo-intro-quote04 p,
+.goyo-intro-quote05 p {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: clamp(14px, 1.2vw, 20px);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.04em;
+
+  white-space: nowrap;
+}
+
+.goyo-intro-quote01::before,
+.goyo-intro-quote02::before,
+.goyo-intro-quote03::before,
+.goyo-intro-quote04::before,
+.goyo-intro-quote05::before {
+  content: "❝";
+
+  position: absolute;
+
+  top: 8px;
+  left: 25px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.goyo-intro-quote01::after,
+.goyo-intro-quote02::after,
+.goyo-intro-quote03::after,
+.goyo-intro-quote04::after,
+.goyo-intro-quote05::after {
+  content: "❞";
+
+  position: absolute;
+
+  right: 25px;
+  bottom: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.goyo-intro-quote01 {
+  z-index: 6;
+
+  top: 52%;
+  left: 50%;
+
+  width: min(620px, 45vw);
+
+  color: #173c25;
+  background-color: #9bcf62;
+
+  transform: translateX(-39%) rotate(5deg);
+}
+
+.goyo-intro-quote02 {
+  z-index: 5;
+
+  top: 64%;
+  left: 50%;
+
+  width: min(700px, 56vw);
+
+  color: #f5fffd;
+  background-color: #3e7d74;
+
+  transform: translateX(-58%) rotate(-2deg);
+}
+
+.goyo-intro-quote03 {
+  z-index: 6;
+
+  top: 81%;
+  left: 50%;
+
+  width: min(650px, 48vw);
+
+  color: #a8eee1;
+  background-color: #414846;
+
+  transform: translateX(-36%) rotate(8deg);
+}
+
+.goyo-intro-quote04 {
+  z-index: 2;
+
+  top: 78%;
+  left: -8%;
+
+  width: min(740px, 42vw);
+
+  color: #50857f;
+  background-color: #8ec4bf;
+
+  opacity: 0.27;
+  filter: blur(2px);
+
+  transform: rotate(4deg);
+}
+
+.goyo-intro-quote05 {
+  z-index: 2;
+
+  top: 53%;
+  right: -8%;
+
+  width: min(650px, 38vw);
+
+  color: #52827d;
+  background-color: #9fc9c5;
+
+  opacity: 0.23;
+  filter: blur(3px);
+}
+
+.goyo-intro-quote06 {
+  z-index: 1;
+
+  top: 54%;
+  left: -10%;
+
+  width: min(650px, 37vw);
+  height: 70px;
+
+  background-color: #afc6c2;
+
+  opacity: 0.28;
+  filter: blur(1.5px);
+
+  transform: rotate(-5deg);
+}
+
+.goyo-intro-quote07 {
+  z-index: 1;
+
+  top: 76%;
+  right: -9%;
+
+  width: min(760px, 42vw);
+  height: 72px;
+
+  background-color: #b2cbc7;
+
+  opacity: 0.28;
+  filter: blur(1.5px);
+
+  transform: rotate(-8deg);
+}
+
+
+
+
+.goyo-target {
+  position: relative;
+
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+
+  padding: 38px 5vw 56px;
+  box-sizing: border-box;
+
+  color: #1b211f;
+  background-color: #dff2ef;
+
+  overflow: hidden;
+}
+
+.goyo-target::before {
+  content: "";
+
+  position: absolute;
+  z-index: 0;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 76%;
+
+  background-color: #f3f9f7;
+
+  clip-path: ellipse(86% 100% at 50% 0%);
+}
+
+.goyo-target > * {
+  position: relative;
+  z-index: 1;
+}
+
+.goyo-target .goyo-title-02 h1 {
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+  padding-right: 0.12em;
+  padding-bottom: 0.16em;
+
+  overflow: visible;
+}
+
+.goyo-target-detail {
+  margin-top: 4px;
+}
+
+.goyo-target-detail p {
+  margin: 0;
+
+  color: #202322;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.055em;
+
+  word-break: keep-all;
+}
+
+.goyo-analysis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(28px, 3vw, 52px);
+
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+.goyo-analysis-01,
+.goyo-analysis-02,
+.goyo-analysis-03 {
+  min-width: 0;
+}
+
+.goyo-analysis-num {
+  min-height: 112px;
+
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.goyo-analysis-num p {
+  margin: 0;
+}
+
+.goyo-analysis-num .num {
+  position: relative;
+  z-index: 1;
+
+  display: inline-block;
+
+  color: #43b7b1;
+
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.goyo-analysis-num .num::before {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  bottom: -4px;
+  left: -10px;
+
+  width: 84px;
+  height: 18px;
+
+  background-color: #d8eee8;
+}
+
+.goyo-analysis-num .title {
+  margin-top: 15px;
+
+  color: #202423;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.38;
+  letter-spacing: -0.055em;
+
+  word-break: keep-all;
+}
+
+.goyo-analysis-detail {
+  margin-top: -24px;
+  position: relative;
+
+  min-height: 108px;
+
+  padding: 20px 24px 12px 70px;
+  box-sizing: border-box;
+
+  color: #697270;
+  background-color: rgba(221, 232, 230, 0.9);
+
+  border-radius: 12px 12px 0 0;
+
+  font-size: clamp(11px, 0.85vw, 14px);
+  font-weight: 500;
+  line-height: 1.72;
+  letter-spacing: -0.035em;
+
+  word-break: keep-all;
+}
+
+.goyo-analysis-detail::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  left: 28px;
+
+  width: 23px;
+  height: 23px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(#edf5f3, #edf5f3)
+      center 7px / 9px 1.5px no-repeat,
+    linear-gradient(#edf5f3, #edf5f3)
+      center 11px / 9px 1.5px no-repeat,
+    linear-gradient(#edf5f3, #edf5f3)
+      center 15px / 6px 1.5px no-repeat,
+    #94a39f;
+}
+
+.goyo-analysis-detail-from {
+  min-height: 45px;
+
+  padding: 4px 24px 20px 70px;
+  box-sizing: border-box;
+
+  color: #929b99;
+  background-color: rgba(221, 232, 230, 0.9);
+
+  border-radius: 0 0 13px 13px;
+}
+
+.goyo-analysis-detail-from p {
+  margin: 0;
+
+  font-size: clamp(10px, 0.75vw, 12px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.035em;
+
+  word-break: keep-all;
+}
+
+.goyo-analysis-detail span {
+  padding: 1px 3px;
+
+  color: #66706e;
+  background-color: rgba(255, 255, 255, 0.76);
+}
+
+.goyo-target-next {
+  position: absolute;
+  z-index: 2;
+
+  bottom: 32px;
+  left: 50%;
+
+  width: max-content;
+  max-width: 90%;
+
+  text-align: center;
+
+  transform: translateX(-50%);
+}
+
+.goyo-target-next::before {
+  content: "";
+
+  position: absolute;
+
+  top: -50px;
+  left: 50%;
+
+  width: 1px;
+  height: 60px;
+
+  background-color: rgba(67, 185, 179, 0.7);
+
+  transform: translateX(-50%);
+}
+
+.goyo-target-next::after {
+  content: "";
+
+  position: absolute;
+
+  top: 8px;
+  left: 50%;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  background-color: #43b9b3;
+  box-shadow: 0 0 0 8px rgba(67, 185, 179, 0.2);
+
+  transform: translateX(-50%);
+}
+
+.goyo-target-next-title {
+  margin: 30px 0 0;
+
+  color: #43b9b3;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.goyo-target-next-detail {
+  margin: 10px 0 0;
+
+  color: #1c2927;
+
+  font-size: 16px;
+  font-weight: 540;
+  line-height: 1.5;
+  letter-spacing: -0.055em;
+
+  word-break: keep-all;
+}
+
+
+
+.goyo-fieldResearch {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  padding: 34px 3.7vw 28px;
+  box-sizing: border-box;
+
+  display: flex;
+
+  background:
+    radial-gradient(
+      ellipse at 82% 115%,
+      rgba(202, 236, 215, 0.9) 0%,
+      rgba(211, 239, 222, 0.55) 35%,
+      transparent 69%
+    ),
+    radial-gradient(
+      ellipse at 8% 115%,
+      rgba(204, 227, 237, 0.82) 0%,
+      rgba(215, 234, 241, 0.48) 38%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      #f3f9f7 0%,
+      #f3f9f7 24%,
+      #f0f7f5 38%,
+      #eaf4f1 58%,
+      #e3f0ec 78%,
+      #d5e9e3 100%
+    );
+
+  overflow: hidden;
+}
+
+.goyo-fieldResearch-inner {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: none;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.goyo-fieldResearch-heading {
+  flex-shrink: 0;
+  margin-bottom: 24px;
+}
+
+.goyo-fieldResearch .goyo-title-02 {
+  margin: 0;
+}
+
+.goyo-fieldResearch .goyo-title-02 h1 {
+  margin: 0;
+  padding-right: 0.12em;
+  padding-bottom: 0.12em;
+
+  font-size: 32px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.06em;
+
+  overflow: visible;
+}
+
+.goyo-fieldResearch-detail {
+  margin-top: 12px;
+}
+
+.goyo-fieldResearch-detail p {
+  margin: 0;
+
+  color: #202322;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.055em;
+
+  word-break: keep-all;
+}
+
+
+.goyo-fieldResearch-content {
+  flex: 1;
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.goyo-research-panel {
+  position: relative;
+
+  min-width: 0;
+  min-height: 0;
+
+  padding-top: 34px;
+}
+
+.goyo-research-panel-title {
+  position: absolute;
+  top: 0;
+  left: 28px;
+  z-index: 3;
+
+  margin: 0;
+  padding: 9px 17px;
+
+  color: #ffffff;
+  background-color: #63aaa6;
+
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1;
+}
+
+.goyo-research-card {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.97);
+
+  overflow: hidden;
+}
+
+
+.goyo-competitor-card {
+  padding: 12px 22px 10px;
+}
+
+.goyo-competitor-table-wrap {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.goyo-competitor-table {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.goyo-competitor-table th,
+.goyo-competitor-table td {
+  border: 0;
+}
+
+.goyo-competitor-table thead {
+  height: 92px;
+
+  border-bottom: 1px solid #dedede;
+}
+
+.goyo-feature-heading {
+  width: 135px;
+
+  padding: 18px 10px 12px 16px;
+
+  color: #9c9c9c;
+
+  text-align: left;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.goyo-competitor-heading {
+  height: 92px;
+
+  padding: 4px 3px 10px;
+
+  color: #999999;
+
+  text-align: center;
+  vertical-align: bottom;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.goyo-competitor-heading.is-goyo {
+  position: relative;
+
+  background-color: rgba(111, 190, 182, 0.1);
+}
+
+.goyo-competitor-heading span {
+  display: block;
+
+  margin-top: 6px;
+
+  white-space: nowrap;
+}
+
+.goyo-text-logo {
+  width: 36px;
+  height: 36px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background-color: #efefef;
+
+  color: #686868;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* 왼쪽 Competitor Analysis 로고 이미지 */
+.goyo-text-logo img {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+/* 오른쪽 Positioning Map 로고 이미지 */
+.goyo-map-logo {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border-radius: 8px;
+}
+
+/* 일반 로고 */
+.goyo-map-logo img {
+  width: 42px;
+  height: 42px;
+
+  display: block;
+  object-fit: contain;
+
+  filter: grayscale(100%);
+}
+
+/* 고요 전체 위치 아이템 */
+.goyo-map-item.is-goyo {
+  z-index: 5;
+}
+
+/* 고요 로고 바깥 흰색 카드 */
+.goyo-map-item.is-goyo .goyo-map-logo {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  box-shadow: 0 12px 32px rgba(66, 185, 179, 0.16);
+}
+
+/* 고요 실제 로고 */
+.goyo-map-item.is-goyo .goyo-map-logo img {
+  width: 66px;
+  height: 66px;
+
+  object-fit: contain;
+
+  filter: none;
+}
+
+/* 고요 밑 이름은 숨김 */
+.goyo-map-item.is-goyo .goyo-map-item-name {
+  display: none;
+}
+
+.goyo-competitor-table tbody tr {
+  height: 52px;
+}
+
+.goyo-feature-name {
+  padding: 10px 8px 10px 16px;
+
+  color: #969696;
+
+  text-align: left;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.goyo-feature-name.is-emphasized {
+  color: #55aaa5;
+}
+
+.goyo-competitor-table td {
+  padding: 8px 3px;
+
+  color: #969696;
+
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.goyo-competitor-table td.is-cross {
+  color: #e8803b;
+}
+
+.goyo-competitor-table td.is-goyo {
+  color: #70bcb5;
+  background-color: rgba(111, 190, 182, 0.1);
+}
+
+
+.goyo-positioning-card {
+  padding: 16px 20px;
+}
+
+.goyo-position-map {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  overflow: visible;
+}
+
+.goyo-map-axis {
+  position: absolute;
+  z-index: 1;
+
+  display: block;
+}
+
+.goyo-map-axis-horizontal {
+  top: 50%;
+  left: 14%;
+
+  width: 72%;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    #d5d8d8 0%,
+    #d5d8d8 50%,
+    #62b9b5 50%,
+    #62b9b5 100%
+  );
+}
+
+.goyo-map-axis-horizontal::before {
+  content: "";
+
+  position: absolute;
+  top: -4px;
+  left: -1px;
+
+  border-top: 4px solid transparent;
+  border-right: 7px solid #d5d8d8;
+  border-bottom: 4px solid transparent;
+}
+
+.goyo-map-axis-horizontal::after {
+  content: "";
+
+  position: absolute;
+  top: -4px;
+  right: -1px;
+
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid #62b9b5;
+}
+
+.goyo-map-axis-vertical {
+  top: 13%;
+  left: 50%;
+
+  width: 1px;
+  height: 74%;
+
+  background: linear-gradient(
+    to bottom,
+    #62b9b5 0%,
+    #62b9b5 50%,
+    #d5d8d8 50%,
+    #d5d8d8 100%
+  );
+}
+
+.goyo-map-axis-vertical::before {
+  content: "";
+
+  position: absolute;
+  top: -1px;
+  left: -4px;
+
+  border-right: 4px solid transparent;
+  border-bottom: 7px solid #62b9b5;
+  border-left: 4px solid transparent;
+}
+
+.goyo-map-axis-vertical::after {
+  content: "";
+
+  position: absolute;
+  bottom: -1px;
+  left: -4px;
+
+  border-top: 7px solid #d5d8d8;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+
+.goyo-map-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+
+  border: 1px dashed #d8dddd;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.goyo-map-circle01 {
+  width: 90px;
+  height: 90px;
+}
+
+.goyo-map-circle02 {
+  width: 178px;
+  height: 178px;
+}
+
+.goyo-map-circle03 {
+  width: 265px;
+  height: 265px;
+}
+
+.goyo-map-label {
+  position: absolute;
+  z-index: 4;
+
+  color: #9d9d9d;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.goyo-map-label-top {
+  top: 4%;
+  left: 50%;
+
+  color: #5db6b1;
+
+  transform: translateX(-50%);
+}
+
+.goyo-map-label-bottom {
+  bottom: 3%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.goyo-map-label-left {
+  top: 50%;
+  left: 3%;
+
+  transform: translateY(-50%);
+}
+
+.goyo-map-label-right {
+  top: 50%;
+  right: 0;
+
+  color: #5db6b1;
+
+  transform: translateY(-50%);
+}
+
+
+.goyo-map-item {
+  position: absolute;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  transform: translate(-50%, -50%);
+}
+
+.goyo-map-logo {
+  width: 39px;
+  height: 39px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background-color: #efefef;
+
+  color: #686868;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.05);
+}
+
+.goyo-map-logo.millie {
+  color: #8a49d4;
+  background-color: #fff066;
+
+  font-size: 21px;
+}
+
+.goyo-map-logo.ridi {
+  color: #ffffff;
+  background-color: #6994df;
+
+  font-size: 22px;
+}
+
+.goyo-map-logo.yes24 {
+  color: #242424;
+  background-color: #f0eee5;
+
+  font-size: 8px;
+  font-style: italic;
+}
+
+.goyo-map-logo.kyobo {
+  color: #ffffff;
+  background-color: #35344d;
+
+  font-size: 13px;
+}
+
+.goyo-map-logo.willa {
+  color: #ffffff;
+  background-color: #70bd55;
+
+  font-size: 11px;
+}
+
+.goyo-map-logo.goyo {
+  color: #70baae;
+  background-color: #ffffff;
+
+  font-size: 23px;
+}
+
+.goyo-map-item-name {
+  color: #a4a4a4;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.goyo-map-item.is-goyo .goyo-map-logo {
+  width: 68px;
+  height: 68px;
+
+  border-radius: 11px;
+
+  font-size: 31px;
+
+  box-shadow: 0 8px 25px rgba(77, 153, 145, 0.16);
+}
+
+.goyo-map-item.is-goyo .goyo-map-item-name {
+  display: none;
+}
+
+
+
+
+
+
+
+.goyo-persona-profile {
+  position: relative;
+  overflow: hidden;
+}
+
+.goyo-persona-photo {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0.7;
+
+  z-index: 0;
+}
+
+.goyo-persona-profile-top,
+.goyo-persona-profile-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+.goyo-persona-profile-top {
+  padding: 48px 32px 0;
+  margin-bottom: 18px;
+}
+
+.goyo-persona-profile-bottom {
+  padding: 0 32px 28px;
+}
+
+
+.goyo-persona01 {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  padding: 34px 3.7vw 28px;
+  box-sizing: border-box;
+
+  color: #202322;
+  background-color: #f3f9f7;
+
+  overflow: hidden;
+}
+
+.goyo-persona01 * {
+  box-sizing: border-box;
+}
+
+.goyo-persona01-inner {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.goyo-persona01-heading {
+  flex-shrink: 0;
+  margin-bottom: 24px;
+}
+
+.goyo-persona01-heading .goyo-title-02 {
+  margin: 0;
+}
+
+.goyo-persona01-heading .goyo-title-02 h1 {
+  margin: 0;
+
+  padding-right: 0.12em;
+  padding-bottom: 0.12em;
+
+  font-size: 32px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.06em;
+
+  overflow: visible;
+}
+
+.goyo-persona01-heading > p {
+  margin: 12px 0 0;
+
+  color: #202322;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.055em;
+
+  word-break: keep-all;
+}
+
+
+.goyo-persona01-content {
+  flex: 1;
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: 29.5% minmax(0, 1fr);
+  gap: 20px;
+
+  width: 94%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+.goyo-persona-name {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.goyo-persona-name strong {
+  font-size: 29px;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.goyo-persona-name span {
+  color: white;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+
+
+.goyo-persona-tags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+.goyo-persona-tags span {
+  padding: 8px 3px;
+
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.23);
+
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1;
+  color: black;
+
+  white-space: nowrap;
+}
+
+
+.goyo-persona-profile h3 {
+  margin: 0 0 6px;
+
+  color: #5ac7c0;
+
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+
+.goyo-persona-story {
+  margin-bottom: 12px;
+}
+
+.goyo-persona-story p {
+  margin: 0;
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.52;
+  letter-spacing: -0.025em;
+
+  word-break: keep-all;
+}
+
+.goyo-persona-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+
+  margin-bottom: 12px;
+}
+
+.goyo-persona-points ul {
+  margin: 0;
+  padding-left: 15px;
+
+  color: white;
+
+  font-size: 10.5px;
+  font-weight: 750;
+  line-height: 1.48;
+}
+
+
+.goyo-persona-personality h3 {
+  margin-bottom: 7px;
+}
+
+.goyo-personality-row {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 6px;
+}
+
+.goyo-personality-row span {
+  color: white;
+
+  font-size: 10.5px;
+  font-weight: 750;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.goyo-personality-row i {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 4px;
+
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.goyo-personality-row i::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: var(--value);
+  height: 100%;
+
+  border-radius: inherit;
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+.goyo-personality-row i::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: var(--value);
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.goyo-persona-journey {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  padding: 18px 24px 13px;
+
+  display: grid;
+  grid-template-rows:
+    39px
+    46px
+    78px
+    minmax(184px, 1fr)
+    70px
+    64px;
+
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.97);
+
+  overflow: hidden;
+}
+
+
+.goyo-persona-journey > h2 {
+  margin: 0;
+
+  color: #159c97;
+
+  text-align: center;
+
+  font-size: 22px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+
+
+.goyo-journey-stage-row,
+.goyo-journey-text-row,
+.goyo-journey-feeling {
+  display: grid;
+  grid-template-columns: 72px repeat(5, minmax(0, 1fr));
+  align-items: center;
+
+  min-width: 0;
+}
+
+.goyo-journey-side-title {
+  color: #b6ceca;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.goyo-journey-stage {
+  position: relative;
+
+  height: 37px;
+  margin-right: 14px;
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background-color: #58bcb7;
+
+  text-align: center;
+
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+.goyo-journey-stage::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: -14px;
+
+  border-top: 18.5px solid transparent;
+  border-bottom: 18.5px solid transparent;
+  border-left: 14px solid #58bcb7;
+}
+
+.goyo-journey-stage + .goyo-journey-stage::before {
+  content: "";
+
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  border-top: 18.5px solid transparent;
+  border-bottom: 18.5px solid transparent;
+  border-left: 16px solid #ffffff;
+}
+
+
+
+.goyo-journey-text-row {
+  padding: 9px 0;
+
+  border-bottom: 1px solid #e2e8e6;
+}
+
+.goyo-journey-text-row p {
+  margin: 0;
+  padding: 0 8px;
+
+  color: #626765;
+
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.35;
+
+  word-break: keep-all;
+}
+
+
+.goyo-journey-feeling {
+  min-height: 0;
+
+  border-bottom: 1px solid #e2e8e6;
+}
+
+.goyo-feeling-chart {
+  position: relative;
+
+  grid-column: 2 / 7;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.goyo-feeling-chart svg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.goyo-feeling-point {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translate(-50%, -50%);
+}
+
+.goyo-feeling-point span {
+  width: 125px;
+  margin-bottom: 5px;
+  padding: 6px 6px;
+
+  color: #65706e;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  text-align: center;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.35;
+
+  box-shadow: 0 3px 12px rgba(81, 125, 119, 0.07);
+}
+
+.goyo-feeling-point b {
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+
+.goyo-feeling-point.point01 {
+  left: 10%;
+  top: 73%;
+}
+
+.goyo-feeling-point.point02 {
+  left: 30%;
+  top: 73%;
+}
+
+.goyo-feeling-point.point03 {
+  left: 50%;
+  top: 47%;
+}
+
+.goyo-feeling-point.point04 {
+  left: 70%;
+  top: 47%;
+}
+
+.goyo-feeling-point.point05 {
+  left: 90%;
+  top: 18%;
+}
+
+
+
+.goyo-journey-needs {
+  padding: 8px 0;
+}
+
+
+
+.goyo-journey-opportunity {
+  padding: 7px 0 0;
+
+  border-bottom: 0;
+}
+
+.goyo-persona02 {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  padding: 34px 3.7vw 28px;
+  box-sizing: border-box;
+
+  color: #202322;
+  background-color: #f3f9f7;
+
+  overflow: hidden;
+}
+
+.goyo-persona02 * {
+  box-sizing: border-box;
+}
+
+
+
+.goyo-persona02 .goyo-feeling-point.point01 {
+  left: 10%;
+  top: 47%;
+}
+
+.goyo-persona02 .goyo-feeling-point.point02 {
+  left: 30%;
+  top: 77%;
+}
+
+.goyo-persona02 .goyo-feeling-point.point03 {
+  left: 50%;
+  top: 77%;
+}
+
+.goyo-persona02 .goyo-feeling-point.point04 {
+  left: 70%;
+  top: 27%;
+}
+
+.goyo-persona02 .goyo-feeling-point.point05 {
+  left: 90%;
+  top: 27%;
+}
+
+
+.goyo-userNeed {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 34px 3.7vw 28px;
+  box-sizing: border-box;
+  color: #202322;
+  background-color: #f3f9f7;
+  overflow: hidden;
+}
+
+.goyo-userNeed * {
+  box-sizing: border-box;
+}
+
+.goyo-userNeed-inner {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.goyo-userNeed-heading {
+  flex-shrink: 0;
+}
+
+.goyo-userNeed-heading .goyo-title-02 {
+  margin: 0;
+}
+
+.goyo-userNeed-heading .goyo-title-02 h1 {
+  margin: 0;
+  padding-right: 0.12em;
+  padding-bottom: 0.12em;
+  font-size: 32px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.06em;
+  overflow: visible;
+}
+
+.goyo-userNeed-heading > p {
+  margin: 12px 0 0;
+  color: #202322;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.055em;
+  word-break: keep-all;
+}
+
+/* 세 개의 기능 */
+
+.goyo-userNeed-list {
+  flex: 1;
+  min-height: 0;
+  width: 76%;
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 44px;
+  align-content: start;
+}
+
+.goyo-userNeed-item {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 145px 58px 220px;
+}
+
+/* 위쪽 사용자 요구 */
+
+.goyo-userNeed-request {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 14px;
+  background-color: #edf2f3;
+}
+
+.goyo-userNeed-request p {
+  margin: 0;
+  color: #3d4547;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
+
+/* 위 카드와 아래 카드 연결선 */
+
+.goyo-userNeed-connector {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.goyo-userNeed-connector::before {
+  content: "";
+  width: 1px;
+  height: 44px;
+  background-color: currentColor;
+}
+
+.goyo-userNeed-connector span {
+  position: absolute;
+  bottom: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* 아래 핵심 기능 카드 */
+
+.goyo-userNeed-solution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1.5px solid currentColor;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.goyo-userNeed-solution p {
+  margin: 18px 0 0;
+  color: #202322;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
+
+.goyo-userNeed-solution strong {
+  color: currentColor;
+  font-weight: 750;
+}
+
+.goyo-userNeed-icon {
+  width: 78px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.goyo-userNeed-icon.folder {
+  border-radius: 8px;
+  background: linear-gradient(145deg, #56d2d3, #16aaa9);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 48px;
+  box-shadow: 0 10px 25px rgba(42, 184, 183, 0.18);
+}
+
+.goyo-userNeed-icon.metaphor {
+  color: #7bc946;
+  font-size: 76px;
+  transform: rotate(-15deg);
+  text-shadow: 0 7px 13px rgba(85, 178, 42, 0.18);
+}
+
+.goyo-userNeed-icon.share {
+  border-radius: 50%;
+  background: linear-gradient(145deg, #7aa5ff, #2965d9);
+  color: #ffffff;
+  font-size: 40px;
+  transform: rotate(-25deg);
+  box-shadow: 0 10px 24px rgba(55, 102, 215, 0.2);
+}
+
+/* 카드별 색상 */
+
+.goyo-userNeed-item.userNeed01 {
+  color: #50c8c6;
+}
+
+.goyo-userNeed-item.userNeed01 .goyo-userNeed-solution {
+  background-color: rgba(215, 247, 243, 0.65);
+}
+
+.goyo-userNeed-item.userNeed02 {
+  color: #7bc951;
+}
+
+.goyo-userNeed-item.userNeed02 .goyo-userNeed-solution {
+  background-color: rgba(224, 247, 220, 0.65);
+}
+
+.goyo-userNeed-item.userNeed03 {
+  color: #7397e5;
+}
+
+.goyo-userNeed-item.userNeed03 .goyo-userNeed-solution {
+  background-color: rgba(221, 234, 249, 0.72);
+}
+
+
+
+
+.goyo-serviceDesign {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 34px 3.7vw 28px;
+  box-sizing: border-box;
+  color: #202322;
+  background-color: #f3f9f7;
+  overflow: hidden;
+}
+
+.goyo-serviceDesign * {
+  box-sizing: border-box;
+}
+
+.goyo-serviceDesign-inner {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.goyo-serviceDesign-heading {
+  flex-shrink: 0;
+  margin-bottom: 30px;
+}
+
+.goyo-serviceDesign-heading .goyo-title-02 {
+  margin: 0;
+}
+
+.goyo-serviceDesign-heading .goyo-title-02 h1 {
+  margin: 0;
+  padding-right: 0.12em;
+  padding-bottom: 0.12em;
+  font-size: 32px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.06em;
+  overflow: visible;
+}
+
+.goyo-serviceDesign-heading > p {
+  margin: 16px 0 0;
+  color: #8c9694;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+}
+
+.goyo-serviceDesign-content {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(330px, 0.9fr);
+  gap: 54px;
+}
+
+.goyo-serviceDesign-left {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.goyo-serviceDesign h3 {
+  margin: 0 0 12px;
+  color: #c0cecc;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1;
+}
+
+.goyo-brand-row {
+  display: grid;
+  grid-template-columns: 190px 190px minmax(0, 1fr);
+  gap: 22px;
+}
+
+.goyo-brand-block {
+  min-width: 0;
+}
+
+.goyo-iconGrid,
+.goyo-appIcon,
+.goyo-logoConcept {
+  height: 160px;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.94);
+}
+
+/* 아이콘 그리드 */
+
+.goyo-iconGrid {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(209, 218, 217, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(209, 218, 217, 0.45) 1px, transparent 1px),
+    #ffffff;
+  background-size: 23px 23px;
+}
+
+.goyo-iconGrid::before,
+.goyo-iconGrid::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(199, 209, 207, 0.65);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.goyo-iconGrid::before {
+  width: 120px;
+  height: 120px;
+}
+
+.goyo-iconGrid::after {
+  width: 72px;
+  height: 72px;
+}
+
+.goyo-iconGrid-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(199, 209, 207, 0.55);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.goyo-iconGrid-circle.circle01 {
+  width: 145px;
+  height: 145px;
+}
+
+.goyo-iconGrid-circle.circle02 {
+  width: 42px;
+  height: 42px;
+}
+
+.goyo-iconGrid-line {
+  position: absolute;
+  width: 210px;
+  height: 1px;
+  background-color: rgba(199, 209, 207, 0.6);
+}
+
+.goyo-iconGrid-line.line01 {
+  transform: rotate(45deg);
+}
+
+.goyo-iconGrid-line.line02 {
+  transform: rotate(-45deg);
+}
+
+/* 메인 로고 도형 */
+
+.goyo-brand-mark {
+  position: relative;
+  width: 120px;
+  height: 105px;
+}
+
+.goyo-brand-mark i,
+.goyo-brand-mark b {
+  position: absolute;
+  display: block;
+  bottom: 10px;
+}
+
+.goyo-brand-mark i {
+  left: 4px;
+  width: 69px;
+  height: 57px;
+  background-color: #61c4b4;
+  clip-path: polygon(0 28%, 32% 45%, 54% 0, 100% 100%, 45% 100%);
+}
+
+.goyo-brand-mark b {
+  right: 4px;
+  width: 79px;
+  height: 90px;
+  background-color: #55bda9;
+  clip-path: polygon(50% 0, 100% 72%, 42% 100%, 0 60%);
+}
+
+.goyo-brand-mark.is-grid {
+  z-index: 2;
+  opacity: 0.34;
+  transform: scale(0.85);
+}
+
+.goyo-appIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 로고 콘셉트 */
+
+.goyo-logoConcept {
+  padding: 32px 38px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.goyo-logoFormula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+}
+
+.goyo-formula-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.goyo-formula-item small {
+  color: #c0c6c4;
+  font-size: 11px;
+}
+
+.goyo-logoFormula > strong {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #d4dbd9;
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.goyo-folder-symbol {
+  position: relative;
+  width: 40px;
+  height: 27px;
+  border-radius: 4px;
+  background-color: #b2b9b7;
+}
+
+.goyo-folder-symbol::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 4px;
+  width: 17px;
+  height: 8px;
+  border-radius: 3px 3px 0 0;
+  background-color: #b2b9b7;
+}
+
+.goyo-mountain-symbol {
+  width: 46px;
+  height: 31px;
+  background-color: #b2b9b7;
+  clip-path: polygon(0 100%, 25% 50%, 40% 70%, 66% 0, 100% 100%);
+}
+
+.goyo-brand-mark.formula-result {
+  width: 90px;
+  height: 72px;
+  transform: scale(0.72);
+}
+
+.goyo-logoConcept > p {
+  margin: 17px 0 0;
+  color: #9ba4a2;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+/* 컬러 팔레트 */
+
+.goyo-color-block {
+  min-width: 0;
+}
+
+.goyo-mainColors,
+.goyo-grayColors {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+}
+
+.goyo-mainColors {
+  height: 160px;
+  grid-template-columns: 2.5fr 1fr 0.65fr 0.65fr;
+  border-radius: 13px;
+}
+
+.goyo-mainColors i,
+.goyo-grayColors i {
+  display: block;
+}
+
+.goyo-mainColor-label {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  left: 30px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.goyo-mainColors .main01 {
+  background: linear-gradient(90deg, #3bb88e, #67c9c5);
+}
+
+.goyo-mainColors .main02 {
+  background-color: #73c7c6;
+}
+
+.goyo-mainColors .main03 {
+  background-color: #c7dde6;
+}
+
+.goyo-mainColors .main04 {
+  background-color: #3a96b3;
+}
+
+.goyo-grayColors {
+  height: 80px;
+  margin-top: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  border-radius: 12px;
+  border: 1px solid #e8eceb;
+}
+
+.goyo-grayColors .gray01 { background-color: #ffffff; }
+.goyo-grayColors .gray02 { background-color: #f3f3f3; }
+.goyo-grayColors .gray03 { background-color: #b7b7b7; }
+.goyo-grayColors .gray04 { background-color: #999999; }
+.goyo-grayColors .gray05 { background-color: #474747; }
+.goyo-grayColors .gray06 { background-color: #111111; }
+
+/* 오른쪽 그래픽 */
+
+.goyo-graphics {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.goyo-graphics-grid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.goyo-graphic-card {
+  position: relative;
+  min-height: 0;
+  padding: 23px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.goyo-graphic-card::before,
+.goyo-graphic-card::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: -25%;
+  left: -25%;
+  border-radius: 50%;
+}
+
+.goyo-graphic-card::before {
+  bottom: 26%;
+  height: 50%;
+  background-color: rgba(167, 199, 187, 0.28);
+  transform: rotate(9deg);
+}
+
+.goyo-graphic-card::after {
+  bottom: -30%;
+  height: 75%;
+  background-color: rgba(128, 179, 156, 0.22);
+}
+
+.goyo-graphic-card h4,
+.goyo-graphic-card p,
+.goyo-graphic-mountain {
+  position: relative;
+  z-index: 2;
+}
+
+.goyo-graphic-card h4 {
+  margin: 12px 0 0;
+  color: #5e746e;
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.goyo-graphic-card p {
+  margin: 3px 0 0;
+  color: #80918c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.goyo-graphic-mountain {
+  width: 120px;
+  height: 105px;
+}
+
+.cloud-shape {
+  background-color: #10a952;
+  clip-path: polygon(15% 78%, 38% 10%, 58% 56%, 70% 24%, 88% 82%, 55% 100%);
+}
+
+.highland-shape {
+  background-color: #1fb1a9;
+  clip-path: polygon(13% 82%, 31% 14%, 75% 31%, 90% 86%, 42% 94%);
+}
+
+.plain-shape {
+  background-color: #58cc1b;
+  clip-path: polygon(9% 71%, 28% 47%, 54% 21%, 80% 40%, 89% 78%, 35% 84%);
+}
+
+.mountain-shape {
+  background-color: #19bea1;
+  clip-path: polygon(13% 87%, 36% 8%, 58% 69%, 90% 80%, 90% 91%, 35% 92%);
+}
+
+.graphic-cloud {
+  background: linear-gradient(to bottom, #d5efdf, #b9d9c9);
+}
+
+.graphic-highland {
+  background: linear-gradient(to bottom, #ddf5f1, #c6ded8);
+}
+
+.graphic-plain {
+  background: linear-gradient(to bottom, #e4f7dd, #d3e7c9);
+}
+
+.graphic-mountainCard {
+  background: linear-gradient(to bottom, #dff4ef, #ccdfd9);
 }

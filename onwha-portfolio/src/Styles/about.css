@@ -96,16 +96,16 @@
 .program-list {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
   flex-wrap: wrap;
   margin-top: 20px;
 }
 
 .program-item {
-  width: 82px;
-  height: 82px;
+  width: 40px;
+  height: 40px;
 
-  /* 투명한 동일 크기 셀 */
+  
   border: 1px solid transparent;
   overflow: hidden;
 
