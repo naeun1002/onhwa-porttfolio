@@ -708,7 +708,7 @@ function Goyo() {
               </div>
               <div className="goyo-userNeed-connector"><span /></div>
               <div className="goyo-userNeed-solution">
-                <div className="goyo-userNeed-icon folder">▰</div>
+                <img className="goyo-userNeed-icon" src = "/images/folderIcon.png"></img>
                 <p><strong>플레이리스트 기능</strong>을<br />이용한 시집 재구성 기능</p>
               </div>
             </article>
@@ -719,7 +719,7 @@ function Goyo() {
               </div>
               <div className="goyo-userNeed-connector"><span /></div>
               <div className="goyo-userNeed-solution">
-                <div className="goyo-userNeed-icon metaphor">∞</div>
+                <img className="goyo-userNeed-icon" src = "/images/loopIcon.png"></img>
                 <p><strong>산 메타포</strong>를 이용하여 시를<br />직관적으로 나타낸 기능</p>
               </div>
             </article>
@@ -730,7 +730,7 @@ function Goyo() {
               </div>
               <div className="goyo-userNeed-connector"><span /></div>
               <div className="goyo-userNeed-solution">
-                <div className="goyo-userNeed-icon share">➤</div>
+                <img className="goyo-userNeed-icon" src = "/images/snsIcon.png"></img>
                 <p>시 구절을 스크랩하여<br /><strong>SNS에 공유</strong>할 수 있는 기능</p>
               </div>
             </article>
@@ -754,19 +754,13 @@ function Goyo() {
                 <article className="goyo-brand-block goyo-iconGrid-block">
                   <h3>ICON GRID</h3>
                   <div className="goyo-iconGrid">
-                    <span className="goyo-iconGrid-circle circle01" />
-                    <span className="goyo-iconGrid-circle circle02" />
-                    <span className="goyo-iconGrid-line line01" />
-                    <span className="goyo-iconGrid-line line02" />
-                    <div className="goyo-brand-mark is-grid"><i /><b /></div>
+                    <img className="goyo-iconGrid-img" src="/images/goyoIconGrid.png" alt="고요 아이콘 그리드" />
                   </div>
                 </article>
 
                 <article className="goyo-brand-block goyo-appIcon-block">
                   <h3>APP ICON</h3>
-                  <div className="goyo-appIcon">
-                    <div className="goyo-brand-mark"><i /><b /></div>
-                  </div>
+                  <img className="goyo-appIcon-img" src="/images/goyoAppIcon.png" alt="고요 앱 아이콘" />
                 </article>
 
                 <article className="goyo-brand-block goyo-logoConcept-block">
@@ -807,25 +801,25 @@ function Goyo() {
               <h3>GRAPHICS</h3>
               <div className="goyo-graphics-grid">
                 <article className="goyo-graphic-card graphic-cloud">
-                  <div className="goyo-graphic-mountain cloud-shape" />
+                  <img className="goyo-graphic-image" src="/images/goyoGraphicsGurung.png" alt="구릉 그래픽" />
                   <h4>구릉</h4>
                   <p>감정이 다양한 시</p>
                 </article>
 
                 <article className="goyo-graphic-card graphic-highland">
-                  <div className="goyo-graphic-mountain highland-shape" />
+                  <img className="goyo-graphic-image" src="/images/goyoGraphicsGowon.png" alt="고원 그래픽" />
                   <h4>고원</h4>
                   <p>감정이 고조된 시</p>
                 </article>
 
                 <article className="goyo-graphic-card graphic-plain">
-                  <div className="goyo-graphic-mountain plain-shape" />
+                  <img className="goyo-graphic-image" src="/images/goyoGraphicsPyungwon.png" alt="평원 그래픽" />
                   <h4>평원</h4>
                   <p>감정이 안정된 시</p>
                 </article>
 
                 <article className="goyo-graphic-card graphic-mountainCard">
-                  <div className="goyo-graphic-mountain mountain-shape" />
+                  <img className="goyo-graphic-image" src="/images/goyoGraphicsGosan.png" alt="고산 그래픽" />
                   <h4>고산</h4>
                   <p>급격한 변화가 있는 시</p>
                 </article>
