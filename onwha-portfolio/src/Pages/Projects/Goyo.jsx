@@ -910,7 +910,27 @@ function Goyo() {
       </section>
 
       <section className="goyo-home">
-
+        <div className="goyo-Home-inner">
+          <div className="goyo-title-02">
+            <h1>Home</h1>
+          </div>
+          <div className="goyo-home-detail">
+            <h1>책장에 꽂힌 책들을 스와이프 해, 하나씩 내용을 확인해 보세요</h1>
+            <p>책장에서 책을 고를 때 하나씩 넘겨보며 원하는 책을 고르 듯이 고요에서는 전자책과는 다른, 종이책만의 감성을 담았습니다.</p>
+          </div>
+          <img className="goyo-home-image goyo-home-image01" src="/images/goyoDetailImage/goyoHomeImage01.png" alt="고요의 능선 찾기 화면"/>
+        <img
+          className="goyo-home-image goyo-home-image02"
+          src="/images/goyoDetailImage/goyoHomeImage02.png"
+          alt="고요 홈 화면"
+        />
+        <img
+          className="goyo-home-image goyo-home-image03"
+          src="/images/goyoDetailImage/goyoHomeImage03.png"
+          alt="고요 시 상세 화면"
+        />
+        </div>
+        
       </section>
 
       <section className="goyo-archive">
