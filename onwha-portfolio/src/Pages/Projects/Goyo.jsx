@@ -911,6 +911,11 @@ function Goyo() {
 
       <section className="goyo-home">
         <div className="goyo-Home-inner">
+          <img
+            className="goyo-home-image goyo-home-background"
+            src="/images/goyoHome/goyoAppHomeBackground.png"
+            alt=""
+          />
           <div className="goyo-title-02">
             <h1>Home</h1>
           </div>
@@ -919,6 +924,14 @@ function Goyo() {
             <p>책장에서 책을 고를 때 하나씩 넘겨보며 원하는 책을 고르 듯이 고요에서는 전자책과는 다른, 종이책만의 감성을 담았습니다.</p>
           </div>
           <img className="goyo-home-image goyo-home-image01" src="/images/goyoDetailImage/goyoHomeImage01.png" alt="고요의 능선 찾기 화면"/>
+          <img
+            className="goyo-home-image goyo-home-bar"
+            src="/images/goyoHome/goyoAppHomeBar.png"
+            alt=""
+          />
+          <div className="goyo-home-detail-02">
+            <p>관심사를 분석해 나온 능선을 <br /> 홈화면에서 확인할 수 있어요.</p>
+          </div>
         <img
           className="goyo-home-image goyo-home-image02"
           src="/images/goyoDetailImage/goyoHomeImage02.png"
@@ -934,11 +947,88 @@ function Goyo() {
       </section>
 
       <section className="goyo-archive">
+        <div className="goyo-archive-inner">
+          <div className="goyo-page-title-01">
+            <p>ARCHIVE</p>
+          </div>
+          <h1 className="goyo-intro-header goyo-archive-header">
+            원하는 시집을 자유롭게 보관하고 재구성할 수 있어요
+          </h1>
+          <div className="goyo-intro-detail goyo-archive-detail">
+            <p>
+              글과 사진이 많은 e-book 특성을 고려하여,<br />
+              보관함은 보다 깔끔하고 직관적으로 디자인했어요.
+            </p>
+          </div>
 
+          <div className="goyo-archive-flow">
+            <figure className="goyo-archive-item goyo-archive-item01">
+              <img src="/images/goyoArchive/goyoAppArchive01.png" alt="고요 보관함 화면" />
+            </figure>
+            <span className="goyo-archive-arrow goyo-archive-arrow01" aria-hidden="true" />
+            <figure className="goyo-archive-item goyo-archive-item02">
+              <img src="/images/goyoArchive/goyoAppArchive02.png" alt="고요 시집 목록 화면" />
+            </figure>
+            <span className="goyo-archive-arrow goyo-archive-arrow02" aria-hidden="true" />
+            <figure className="goyo-archive-item goyo-archive-item03">
+              <img src="/images/goyoArchive/goyoAppArchive03.png" alt="고요 시집 상세 설명 화면" />
+            </figure>
+            <span className="goyo-archive-arrow goyo-archive-arrow03" aria-hidden="true" />
+            <figure className="goyo-archive-item goyo-archive-item04">
+              <img src="/images/goyoArchive/goyoAppArchive04.png" alt="고요 시집 읽기 화면" />
+            </figure>
+            <span className="goyo-archive-arrow goyo-archive-arrow04" aria-hidden="true" />
+            <figure className="goyo-archive-item goyo-archive-item05">
+              <img src="/images/goyoArchive/goyoAppArchive05.png" alt="고요 플로우리스트 화면" />
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section className="goyo-coustomize">
+        <div className="goyo-customize-inner">
+          <div className="goyo-title-02">
+            <h1>Customize</h1>
+          </div>
 
+          <div className="goyo-home-detail">
+            <h1>내 취향이 담긴 나만의 플로우리스트를 제작할 수 있어요</h1>
+            <p>추천 시집 디자인이 제공되어 부담 없이 플로우리스트를 제작할 수 있습니다.</p>
+          </div>
+
+          <img
+            className="goyo-customize-bar goyo-customize-bar01"
+            src="/images/goyoCustomize/goyoCustomizeBar01.png"
+            alt=""
+          />
+          <img
+            className="goyo-customize-bar goyo-customize-bar02"
+            src="/images/goyoCustomize/goyoCustomizeBar02.png"
+            alt=""
+          />
+
+          <img
+            className="goyo-customize-bar goyo-customize-bar03"
+            src="/images/goyoCustomize/goyoCustomizeBar03.png"
+            alt=""
+          />
+
+          <img
+            className="goyo-customize-image goyo-customize-image01"
+            src="/images/goyoCustomize/goyoAppCustomize01.png"
+            alt="고요 플로우리스트 화면"
+          />
+          <img
+            className="goyo-customize-image goyo-customize-image02"
+            src="/images/goyoCustomize/goyoAppCustomize02.png"
+            alt="고요 새로운 플로우리스트 설정 화면"
+          />
+          <img
+            className="goyo-customize-image goyo-customize-image03"
+            src="/images/goyoCustomize/goyoAppCustomize03.png"
+            alt="고요 플로우리스트 꾸미기 화면"
+          />
+        </div>
       </section>
 
       <section className="goyo-favorites">
