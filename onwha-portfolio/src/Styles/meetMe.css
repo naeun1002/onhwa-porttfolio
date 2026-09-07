@@ -267,7 +267,8 @@ body {
 
   color: rgba(255, 255, 255, 0.58);
   font-size: 16px;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: keep-all;
 }
 
 
@@ -391,8 +392,8 @@ body {
 
 @media (max-width: 900px) {
   .meetMe-page {
-    top: 90px;
-    height: calc(100dvh - 90px);
+    top: 74px;
+    height: calc(100dvh - 74px);
   }
 
   .meetMe-first-page,
@@ -400,7 +401,7 @@ body {
   .meetMe-third-page,
   .meetMe-fourth-page,
   .meetMe-fifth-page {
-    min-height: calc(100dvh - 90px);
+    min-height: calc(100dvh - 74px);
     padding: 70px 22px 80px;
   }
 

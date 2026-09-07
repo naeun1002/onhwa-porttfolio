@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../../Styles/goyo.css";
 
 const competitors = [
@@ -124,6 +125,35 @@ const positioningItems = [
 ];
 
 function Goyo() {
+  useEffect(() => {
+    const page = document.querySelector(".goyo-page");
+    const award = document.querySelector(".goyo-award");
+
+    if (!page || !award) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        window.dispatchEvent(
+          new CustomEvent("goyo-award-visibility", {
+            detail: { visible: entry.isIntersecting },
+          }),
+        );
+      },
+      { root: page, threshold: 0.65 },
+    );
+
+    observer.observe(award);
+
+    return () => {
+      observer.disconnect();
+      window.dispatchEvent(
+        new CustomEvent("goyo-award-visibility", {
+          detail: { visible: false },
+        }),
+      );
+    };
+  }, []);
+
   return (
     <main className="goyo-page">
       <section className="goyo-intro">
@@ -949,7 +979,7 @@ function Goyo() {
       <section className="goyo-archive">
         <div className="goyo-archive-inner">
           <div className="goyo-page-title-01">
-            <p>ARCHIVE</p>
+            <p>Archive</p>
           </div>
           <h1 className="goyo-intro-header goyo-archive-header">
             원하는 시집을 자유롭게 보관하고 재구성할 수 있어요
@@ -996,22 +1026,12 @@ function Goyo() {
             <p>추천 시집 디자인이 제공되어 부담 없이 플로우리스트를 제작할 수 있습니다.</p>
           </div>
 
-          <img
-            className="goyo-customize-bar goyo-customize-bar01"
-            src="/images/goyoCustomize/goyoCustomizeBar01.png"
-            alt=""
-          />
-          <img
-            className="goyo-customize-bar goyo-customize-bar02"
-            src="/images/goyoCustomize/goyoCustomizeBar02.png"
-            alt=""
-          />
+          <img className="goyo-customize-bar goyo-customize-bar01" src="/images/goyoCustomize/goyoCustomizeBar01.png" alt=""/>
+          <img className="goyo-customize-bar goyo-customize-bar02" src="/images/goyoCustomize/goyoCustomizeBar02.png" alt="" />
 
           <img
             className="goyo-customize-bar goyo-customize-bar03"
-            src="/images/goyoCustomize/goyoCustomizeBar03.png"
-            alt=""
-          />
+            src="/images/goyoCustomize/goyoCustomizeBar03.png"alt="" />
 
           <img
             className="goyo-customize-image goyo-customize-image01"
@@ -1032,15 +1052,102 @@ function Goyo() {
       </section>
 
       <section className="goyo-favorites">
+        <div className="goyo-favorites-inner">
+          <div className="goyo-title-02">
+            <h1>Favorites</h1>
+          </div>
 
+          <div className="goyo-home-detail">
+            <h1>원하는 시인을 한 눈에<br /> 모아 볼 수 있어요</h1>
+            <p>더 빠른 소식을 전해 듣고 싶은 시인은 <br/>시인 프로필 화면에서 알림 설정도 가능해요</p>
+          </div>
+
+          <img className="goyo-favorites-bar goyo-favorites-bar01" src="/images/goyoFavorites/goyoAppFavoritesBar01.png" alt="" />
+          <img className="goyo-favorites-bar goyo-favorites-bar02" src="/images/goyoFavorites/goyoAppFavoritesBar02.png" alt="" />
+          <img className="goyo-favorites-bar goyo-favorites-bar03" src="/images/goyoFavorites/goyoAppFavoritesBar03.png" alt="" />
+          <img className="goyo-favorites-bar goyo-favorites-bar04" src="/images/goyoFavorites/goyoAppFavoritesBar04.png" alt="" />
+
+          <img className="goyo-favorites-image goyo-favorites-image01" src="/images/goyoFavorites/goyoAppFavorites01.png" alt="고요 보관 시인 목록 화면" />
+          <img className="goyo-favorites-image goyo-favorites-image02" src="/images/goyoFavorites/goyoAppFavorites02.png" alt="고요 시인 프로필 화면" />
+          <img className="goyo-favorites-image goyo-favorites-image03" src="/images/goyoFavorites/goyoAppFavorites03.png" alt="고요 시인 목록 화면" />
+          <img className="goyo-favorites-image goyo-favorites-image04" src="/images/goyoFavorites/goyoAppFavorites04.png" alt="고요 시인 게시물 화면" />
+          <img className="goyo-favorites-image goyo-favorites-image05" src="/images/goyoFavorites/goyoAppFavorites05.png" alt="고요 게시물 상세 화면" />
+        </div>
       </section>
 
       <section className="goyo-flowlist">
+        <img
+          className="goyo-flowlist-background"
+          src="/images/goyoFlowlist/goyoAppFlowlistBackground.png"
+          alt=""
+        />
 
+        <div className="goyo-title-02">
+          <h1>Flowlist</h1>
+        </div>
+
+        <div className="goyo-home-detail goyo-flowlist-detail">
+          <h1>
+            직관적으로 나타낸 메타포로,<br />
+            어려운 시도 쉽고 빠르게 이해할 수 있어요
+          </h1>
+        </div>
+
+        <img
+          className="goyo-flowlist-image goyo-flowlist-image01"
+          src="/images/goyoFlowlist/goyoAppFlowlist01.png"
+          alt="고요 플로우리스트 시 상세 화면"
+        />
+        <img
+          className="goyo-flowlist-image goyo-flowlist-image02"
+          src="/images/goyoFlowlist/goyoAppFlowlist02.png"
+          alt="고요 플로우리스트 감상 화면"
+        />
+        <p className="goyo-flowlist-caption goyo-flowlist-caption02">감상문 크기는 두 손가락을<br/>이용해 조절 가능해요</p>
+        <img
+          className="goyo-flowlist-image goyo-flowlist-image03"
+          src="/images/goyoFlowlist/goyoAppFlowlist03.png"
+          alt="고요 플로우리스트 설정 화면"
+        />
+        <p className="goyo-flowlist-caption goyo-flowlist-caption03">한 눈에 알아보기 쉬운 아이콘을 통해 <br/>간편한 독서를 할 수 있어요</p>
+        <img
+          className="goyo-flowlist-image goyo-flowlist-image04"
+          src="/images/goyoFlowlist/goyoAppFlowlist04.png"
+          alt="고요 플로우리스트 화면"
+        />
+        <p className="goyo-flowlist-caption goyo-flowlist-caption04">배경의 산 메타포와 색이 각 구절의 <br/>분위기에 따라 음악 이퀄라이저 처럼 유동적으로<br />변화하여 시를 쉽기 이해할 수 있어요</p>
+        <img
+          className="goyo-flowlist-image goyo-flowlist-image05"
+          src="/images/goyoFlowlist/goyoAppFlowlist05.png"
+          alt="고요 플로우리스트 시 읽기 화면"
+        />
+
+        <img
+          className="goyo-flowlist-bar goyo-flowlist-bar01"
+          src="/images/goyoFlowlist/goyoAppFlowlistBar01.png"
+          alt=""
+        />
+        <img
+          className="goyo-flowlist-bar goyo-flowlist-bar02"
+          src="/images/goyoFlowlist/goyoAppFlowlistBar02.png"
+          alt=""
+        />
       </section>
 
       <section className="goyo-award">
+        <div className="goyo-title-02">
+          <h1>Award / Exhibition</h1>
+        </div>
 
+        <div className="goyo-home-detail goyo-award-detail">
+          <p>제60회 대한민국디자인전람회 공모전에서 개인 출품으로 입선하였으며, <br/>코엑스에서 개최된 DESIGN KOREA 2025 잡페어관 전시에 2025년 11월 12일부터 11월 16일까지 참여하였습니다.</p>
+        </div>
+
+        <img
+          className="goyo-award-image"
+          src="/images/goyoAwardImage/goyoAward.png"
+          alt="디자인 코리아 2025 고요 프로젝트 수상 현장"
+        />
       </section>
     </main>
   );

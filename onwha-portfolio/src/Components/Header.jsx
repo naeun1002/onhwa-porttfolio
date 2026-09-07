@@ -1,8 +1,25 @@
+import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "../Styles/header.css";
 
 function Header() {
   const location = useLocation();
+  const [isGoyoAwardVisible, setIsGoyoAwardVisible] = useState(false);
+
+  useEffect(() => {
+    const handleAwardVisibility = (event) => {
+      setIsGoyoAwardVisible(event.detail.visible);
+    };
+
+    window.addEventListener("goyo-award-visibility", handleAwardVisibility);
+
+    return () => {
+      window.removeEventListener(
+        "goyo-award-visibility",
+        handleAwardVisibility,
+      );
+    };
+  }, []);
 
   const pathname =
     location.pathname.toLowerCase().replace(/\/+$/, "") || "/";
@@ -42,13 +59,17 @@ function Header() {
   };
 
   const currentTheme = headerThemes[pathname] || defaultTheme;
+  const headerTheme =
+    pathname === "/project/goyo" && isGoyoAwardVisible
+      ? { backgroundColor: "#252525", textColor: "#ffffff" }
+      : currentTheme;
 
   return (
     <header
       className="site-header"
       style={{
-        backgroundColor: currentTheme.backgroundColor,
-        color: currentTheme.textColor,
+        backgroundColor: headerTheme.backgroundColor,
+        color: headerTheme.textColor,
       }}
     >
       <Link to="/" className="site-logo">

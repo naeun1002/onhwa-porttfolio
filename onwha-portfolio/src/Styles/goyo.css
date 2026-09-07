@@ -25,7 +25,10 @@
 .goyo-appDesign,
 .goyo-home,
 .goyo-archive,
-.goyo-coustomize {
+.goyo-coustomize,
+.goyo-favorites,
+.goyo-flowlist,
+.goyo-award {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -3051,6 +3054,332 @@
   height: auto;
 }
 
+.goyo-favorites {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
+  padding: 34px 4vw 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #f3f9f7;
+}
+
+.goyo-favorites::before,
+.goyo-favorites::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.goyo-favorites::before {
+  top: 5%;
+  left: 8%;
+  width: 84%;
+  height: 190%;
+  background: #edf7f7;
+}
+
+.goyo-favorites::after {
+  top: 50%;
+  left: 15%;
+  width: 70%;
+  height: 100%;
+  background: #e2f3f4;
+}
+
+.goyo-favorites-inner {
+  position: static;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.goyo-favorites .goyo-title-02 {
+  position: absolute;
+  top: 0;
+  left: 3.7vw;
+  z-index: 3;
+  overflow: visible;
+  font-size: 32px;
+}
+
+.goyo-favorites .goyo-home-detail {
+  position: absolute;
+  top: 82px;
+  left: 3.7vw;
+  z-index: 3;
+}
+
+.goyo-favorites-image,
+.goyo-favorites-bar {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.goyo-favorites-image {
+  z-index: 2;
+  object-fit: contain;
+}
+
+.goyo-favorites-bar {
+  z-index: 1;
+}
+
+.goyo-favorites-image01 {
+  bottom: -20px;
+  left: 1%;
+  width: 30%;
+  height: auto;
+}
+
+.goyo-favorites-image02 {
+  z-index: 1;
+
+  bottom: 16%;
+  left: 15.5%;
+  width: 36%;
+  height: auto;
+}
+
+.goyo-favorites-image03 {
+  z-index: 3;
+
+  bottom: 11%;
+  left: 42%;
+  width: 16%;
+  height: auto;
+}
+
+.goyo-favorites-image04 {
+  z-index: 1;
+
+  right: 23.4%;
+  bottom: 16%;
+  width: 13.5%;
+  height: auto;
+}
+
+.goyo-favorites-image05 {
+  z-index: 3;
+
+  right: 5%;
+  bottom: 12%;
+  width: 16%;
+  height: auto;
+}
+
+.goyo-favorites-bar01 {
+  z-index: 4;
+
+  bottom: 40%;
+  left: 18%;
+  width: 9%;
+  height: auto;
+}
+
+.goyo-favorites-bar02 {
+  z-index: 2;
+
+  top: 69.3%;
+  left: 32.8%;
+  width: 12%;
+  height: auto;
+}
+
+.goyo-favorites-bar03 {
+  z-index: 4;
+
+  top: 11.2%;
+  left: 38.5%;
+  width: 31.5%;
+  height: auto;
+}
+
+.goyo-favorites-bar04 {
+  z-index: 2;
+
+  top: 62%;
+  right: 18%;
+  width: 12%;
+  height: auto;
+}
+
+
+.goyo-flowlist {
+  position: relative;
+
+  width: 100%;
+  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
+
+  padding: 34px 4vw 0;
+  box-sizing: border-box;
+
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 82% 115%,
+      rgba(202, 236, 215, 0.9) 0%,
+      rgba(211, 239, 222, 0.55) 35%,
+      transparent 69%
+    ),
+    radial-gradient(
+      ellipse at 8% 115%,
+      rgba(204, 227, 237, 0.82) 0%,
+      rgba(215, 234, 241, 0.48) 38%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      #f3f9f7 0%,
+      #f3f9f7 24%,
+      #f0f7f5 38%,
+      #eaf4f1 58%,
+      #e3f0ec 78%,
+      #d5e9e3 100%
+    );
+}
+
+.goyo-flowlist .goyo-title-02 {
+  position: absolute;
+  top: 0;
+  left: 3.7vw;
+  z-index: 4;
+  overflow: visible;
+  font-size: 32px;
+}
+
+.goyo-flowlist-detail {
+  top: 82px;
+  left: 3.7vw;
+  z-index: 4;
+}
+
+.goyo-flowlist-background,
+.goyo-flowlist-image,
+.goyo-flowlist-bar {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.goyo-flowlist-background {
+  z-index: 0;
+
+  top: 250px;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.goyo-flowlist-image {
+  z-index: 2;
+
+  object-fit: contain;
+}
+
+.goyo-flowlist-caption {
+  position: absolute;
+  z-index: 3;
+
+  margin: 0;
+
+  color: #8c9694;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: -0.04em;
+
+  word-break: keep-all;
+}
+
+.goyo-flowlist-caption02 {
+  top: 86%;
+  left: 24%;
+  width: 16%;
+}
+
+.goyo-flowlist-caption03 {
+  top: 86%;
+  left: 44%;
+  width: 16%;
+  text-align: start;
+}
+
+.goyo-flowlist-caption04 {
+  top: 78%;
+  left: 75.5%;
+  width: 24%;
+}
+
+.goyo-flowlist-image01 {
+  bottom: 0%;
+  left: 3%;
+  width: 28%;
+  height: auto;
+}
+
+.goyo-flowlist-image02 {
+  bottom: 16%;
+  left: 26%;
+  width: 12%;
+  height: auto;
+}
+
+.goyo-flowlist-image03 {
+  bottom: 16%;
+  left: 44%;
+  width: 12%;
+  height: auto;
+}
+
+.goyo-flowlist-image04 {
+  bottom: 16%;
+  left: 62%;
+  width: 12%;
+  height: auto;
+}
+
+.goyo-flowlist-image05 {
+  z-index: 4;
+  right: -4px;
+  bottom: 15%;
+  width: 31%;
+  height: auto;
+}
+
+.goyo-flowlist-bar01 {
+  z-index: 1;
+
+  top: 35%;
+  left: 18%;
+  width: 8.5%;
+  height: auto;
+}
+
+.goyo-flowlist-bar02 {
+  z-index: 3;
+
+  top: 6%;
+  left: 67%;
+  width: 21%;
+  height: auto;
+}
+
 
 
 
@@ -3185,5 +3514,328 @@
   .goyo-customize-image03 {
     height: 430px;
     margin-top: 12px;
+  }
+
+  .goyo-favorites {
+    height: auto;
+    min-height: calc(100vh - 80px);
+    padding: 34px 7vw 50px;
+  }
+
+  .goyo-favorites::before {
+    top: 12%;
+    left: -45%;
+    width: 190%;
+    height: 176%;
+  }
+
+  .goyo-favorites::after {
+    top: 50%;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+  }
+
+  .goyo-favorites-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .goyo-favorites .goyo-title-02 {
+    position: relative;
+    top: auto;
+    left: auto;
+    align-self: flex-start;
+    font-size: 32px;
+  }
+
+  .goyo-favorites .goyo-home-detail {
+    position: relative;
+    top: auto;
+    left: auto;
+    align-self: flex-start;
+    margin-top: 16px;
+  }
+
+  .goyo-favorites-image {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: 330px;
+    margin-top: 24px;
+  }
+
+  .goyo-favorites-image02,
+  .goyo-favorites-image03,
+  .goyo-favorites-image04,
+  .goyo-favorites-image05 {
+    margin-top: 12px;
+  }
+
+  .goyo-favorites-bar {
+    display: none;
+  }
+}
+
+.goyo-award {
+  position: relative;
+
+  width: 100%;
+  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
+
+  padding: 34px 3.7vw 0;
+  box-sizing: border-box;
+
+  overflow: hidden;
+  background-color: #252525;
+}
+
+.goyo-award .goyo-title-02 {
+  position: absolute;
+  top: 0;
+  left: 3.7vw;
+  z-index: 3;
+
+  overflow: visible;
+}
+
+
+.goyo-award-detail {
+  top: 62px;
+}
+
+.goyo-award-detail p {
+  margin-top: 0;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: -0.04em;
+  opacity: 0.8;
+}
+
+.goyo-award-image {
+  position: absolute;
+  z-index: 1;
+
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+
+  display: block;
+  width: 98%;
+  height: auto;
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+@media (max-width: 800px) {
+  .goyo-page {
+    top: 74px;
+    height: calc(100vh - 74px);
+    scroll-snap-type: y proximity;
+  }
+
+  .goyo-overview,
+  .goyo-target,
+  .goyo-fieldResearch,
+  .goyo-persona01,
+  .goyo-persona02,
+  .goyo-userNeed,
+  .goyo-serviceDesign,
+  .goyo-appDesign,
+  .goyo-home,
+  .goyo-flowlist,
+  .goyo-award {
+    min-height: calc(100vh - 74px);
+  }
+
+  .goyo-overview,
+  .goyo-target,
+  .goyo-fieldResearch,
+  .goyo-persona01,
+  .goyo-persona02,
+  .goyo-userNeed,
+  .goyo-serviceDesign {
+    height: auto;
+    min-height: calc(100vh - 74px);
+    padding: 28px 7vw 44px;
+  }
+
+  .goyo-overview .goyo-intro-header,
+  .goyo-target-detail p,
+  .goyo-fieldResearch-detail p,
+  .goyo-persona01-heading > p,
+  .goyo-userNeed-heading > p {
+    font-size: 20px;
+  }
+
+  .goyo-fieldResearch-content,
+  .goyo-persona01-content,
+  .goyo-serviceDesign-content {
+    grid-template-columns: 1fr;
+    display: grid;
+    gap: 28px;
+  }
+
+  .goyo-fieldResearch,
+  .goyo-persona01,
+  .goyo-persona02,
+  .goyo-userNeed,
+  .goyo-serviceDesign {
+    overflow: visible;
+  }
+
+  .goyo-research-panel,
+  .goyo-research-card {
+    min-height: 360px;
+  }
+
+  .goyo-appDesign {
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 7vw 44px;
+  }
+
+  .goyo-appDesign img,
+  .goyo-appDesign img:nth-child(3) {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+  }
+
+  .goyo-home {
+    height: auto;
+    min-height: calc(100vh - 74px);
+    padding: 28px 7vw 44px;
+  }
+
+  .goyo-home .goyo-title-02,
+  .goyo-home-detail,
+  .goyo-home-detail-02 {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .goyo-home-detail {
+    margin-top: 18px;
+  }
+
+  .goyo-home-image {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin: 24px auto 0;
+  }
+
+  .goyo-home-background,
+  .goyo-home-bar {
+    display: none;
+  }
+
+  .goyo-flowlist {
+    height: auto;
+    min-height: calc(100vh - 74px);
+    padding: 28px 7vw 44px;
+    overflow: hidden;
+  }
+
+  .goyo-flowlist .goyo-title-02,
+  .goyo-flowlist-detail {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .goyo-flowlist-detail {
+    margin-top: 18px;
+  }
+
+  .goyo-flowlist-background {
+    top: 30%;
+    width: 180%;
+    height: 75%;
+    left: -40%;
+  }
+
+  .goyo-flowlist-image,
+  .goyo-flowlist-image01,
+  .goyo-flowlist-image02,
+  .goyo-flowlist-image03,
+  .goyo-flowlist-image04,
+  .goyo-flowlist-image05 {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: 330px;
+    margin: 24px auto 0;
+  }
+
+  .goyo-flowlist-image01,
+  .goyo-flowlist-image05 {
+    height: 400px;
+  }
+
+  .goyo-flowlist-bar {
+    display: none;
+  }
+
+  .goyo-flowlist-caption,
+  .goyo-flowlist-caption02,
+  .goyo-flowlist-caption03,
+  .goyo-flowlist-caption04 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 12px auto 0;
+    text-align: center;
+  }
+
+  .goyo-award {
+    height: auto;
+    min-height: calc(100vh - 74px);
+    padding: 28px 7vw 44px;
+  }
+
+  .goyo-award .goyo-title-02,
+  .goyo-award-detail {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .goyo-award-detail {
+    margin-top: 18px;
+  }
+
+  .goyo-award-image {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 28px;
+    object-fit: contain;
   }
 }
