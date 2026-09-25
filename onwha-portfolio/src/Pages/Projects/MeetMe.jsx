@@ -80,6 +80,26 @@ function MeetMe() {
             <img src="/images/stillcut03.png"/>
         </div>
 
+        <a href="#meetMe-story-05" className="meetMe-move meetMe-down" aria-label="다음 화면으로 이동">
+          <span></span>
+        </a>
+      </section>
+
+      <section id="meetMe-story-05" className="meetMe-fourth-page">
+        <a href="#meetMe-story-04" className="meetMe-move meetMe-up" aria-label="이전 화면으로 이동">
+          <span></span>
+        </a>
+
+        <h1>Still Cut</h1>
+
+        <p>미국의 물리학자 '매튜 P.A 피셔'는 2017년, 논문 「우리는 양자 컴퓨터인가? 아니면 단지 똑똑한 로봇에 불과한가?」에서 인간의 두뇌와 양자컴퓨터의 유사성에 대한 연구결과를 발표했습니다.
+          시선을 통해 하나의 이미지로 관찰되는 우리의 모습 또한 사실 수많은 원자와 '인'으로 이루어져 있으며 끊임없는 사고의 연속과 현상의 중첩으로 구성되어 있습니다.
+        </p>
+
+        <div className="meetMe-still-image">
+            <img src="/images/stillcut04.png"/>
+        </div>
+
         <a className="meetMe-video-link" href ="https://www.youtube.com/watch?v=FlTJySunPWo&t=1s" target="_blank">https://www.youtube.com/watch?v=FlTJySunPWo&t=1s</a>
 
         <a href="#meetMe-story-award" className="meetMe-move meetMe-down" aria-label="다음 화면으로 이동">
@@ -88,25 +108,19 @@ function MeetMe() {
       </section>
 
       <section id="meetMe-story-award" className="meetMe-fifth-page">
-        <a href="#meetMe-story-04" className="meetMe-move meetMe-up" aria-label="이전 화면으로 이동">
+        <a href="#meetMe-story-05" className="meetMe-move meetMe-up" aria-label="이전 화면으로 이동">
           <span></span>
         </a>
 
         <div className="meetMe-award">
             <h1>Award & Exhibition</h1>
             <p className="meetMe-award-text">
-                제3회 양자나노과학연구단 미술공모전 'Qubit'에서 유튜브상을 수상하였으며,<br />
+                제3회 양자나노과학연구단 미술공모전 'Qubit'에서 유튜브상을 수상하였으며, <br/>
                 2025년 10월 11일부터 10월 30일까지 아트린 뮤지움 초청으로 동일 작품을 전시하였습니다.
             </p>
             <div className="meetMe-award-gallery">
                 <div className="gallery-item">
-                    <img src="/images/meetMe-award01.png" alt="수상 이미지 1" />
-                </div>
-                <div className="gallery-item">
-                    <img src="/images/meetMe-award02.png" alt="수상 이미지 2" />
-                </div>
-                <div className="gallery-item award-card">
-                    <img src="/images/meetMe-award03.png" alt="전시확인서" />
+                    <img src="/images/meetMeAward.png" alt="수상 이미지 1" />
                 </div>
             </div>
         </div>

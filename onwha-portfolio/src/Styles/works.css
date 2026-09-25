@@ -1,136 +1,250 @@
-/* Works 전체 영역 */
-.works-layout {
-  width: 100%;
-  margin-top: 48px;
-  padding-bottom: 120px;
+.works-page {
+  min-height: 100vh;
+  padding: 150px 5vw 120px;
+  background: #f3f1eb;
+  color: #111;
+}
 
+.works-heading {
   display: grid;
-  grid-template-columns: 0.85fr 1.25fr 1fr;
-  grid-template-rows: 320px 320px 380px;
-
-  grid-template-areas:
-    "project1 project2 project4"
-    "project1 project3 project4"
-    "project5 project5 .";
-
-  column-gap: 40px;
-  row-gap: 70px;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 32px;
+  align-items: end;
+  max-width: 1440px;
+  margin: 0 auto 82px;
 }
 
-/* 프로젝트별 위치 */
-.works-project-1 {
-  grid-area: project1;
+.works-kicker,
+.works-intro {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.works-project-2 {
-  grid-area: project2;
-}
-
-.works-project-3 {
-  grid-area: project3;
-}
-
-.works-project-4 {
-  grid-area: project4;
-}
-
-.works-project-5 {
-  grid-area: project5;
-}
-
-/* 모든 프로젝트 카드 공통 */
-.works-layout article {
-  min-width: 0;
-
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-/* 이미지가 들어갈 네모 박스 */
-.works-project-visual {
-  width: 100%;
-  flex: 1;
-  min-height: 0;
-
-  border: 2px solid black;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  /* 가운데 정렬 → 왼쪽 정렬 */
-  align-items: flex-start;
-  text-align: left;
-
-  /* 테두리에 너무 붙지 않도록 */
-  padding: 0 20px;
-
-  font-size: 32px;
-
-  transform-origin: center;
-  animation: project-breathing 5s ease-in-out infinite;
-}
-
-/* 프로젝트 이름 */
-.works-project-title {
-  font-size: 18px;
+.works-heading h1 {
+  margin: 0;
+  font-size: clamp(46px, 7vw, 104px);
   font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.06em;
 }
 
-/* 박스마다 조금 다른 속도로 움직이기 */
-.works-project-2 .works-project-visual {
-  animation-duration: 5.8s;
-  animation-delay: -1s;
+.works-heading h1 em {
+  color: #df402d;
+  font-family: Georgia, serif;
+  font-weight: 400;
 }
 
-.works-project-3 .works-project-visual {
-  animation-duration: 4.6s;
-  animation-delay: -2s;
+.works-intro {
+  max-width: 190px;
+  justify-self: end;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
-.works-project-4 .works-project-visual {
-  animation-duration: 6.2s;
-  animation-delay: -3s;
+.works-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  gap: 72px 24px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.works-project-5 .works-project-visual {
-  animation-duration: 5.4s;
-  animation-delay: -4s;
+.project-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  grid-column: span 4;
+  gap: 18px;
+  color: inherit;
+  text-decoration: none;
 }
 
-.project-number {
-  font-size: 16px;
+.project-card-featured {
+  grid-column: span 7;
+  grid-row: span 2;
 }
 
-/* 커졌다가 다시 작아지는 애니메이션 */
-@keyframes project-breathing {
-  0%,
-  100% {
-    transform: scale(0.98);
-  }
-
-  50% {
-    transform: scale(1.02);
-  }
+.project-card-visual {
+  position: relative;
+  aspect-ratio: 1.15;
+  overflow: hidden;
+  background: #dedbd2;
 }
 
-/* 프로젝트 카드 전체 */
-.works-layout article {
-  cursor: pointer;
-
-  transform-origin: center;
-  transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
+.project-card-featured .project-card-visual {
+  aspect-ratio: 1.12;
 }
 
-/* 마우스를 올렸을 때 */
-.works-layout article:hover {
-  transform: translateY(-6px);
+.project-card-visual::after {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.08);
+  content: "";
+  transition: background 0.35s ease;
 }
 
-/* 클릭해서 누르고 있는 순간 */
-.works-layout article:active {
+.project-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.project-card-meet .project-card-visual {
+  background: #0b0b0b;
+}
+
+.project-card-goyo .project-card-visual {
+  background: #dceee7;
+}
+
+.project-card-artroad .project-card-visual {
+  background: #db3b2f;
+}
+
+.project-card-lime .project-card-visual {
+  background: #d9ed52;
+}
+
+.project-card-lavender .project-card-visual {
+  background: #c7b8f1;
+}
+
+.project-card-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 72px;
+  font-weight: 200;
+  transform: translate(-50%, -50%);
+}
+
+.project-card-index,
+.project-card-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  font-size: 12px;
+}
+
+.project-card-index {
+  left: 18px;
+}
+
+.project-card-arrow {
+  right: 18px;
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.project-card-info {
+  display: flex;
+  min-height: 115px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card-meta {
+  margin: 0 0 8px;
+  color: #77736a;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card-meta span {
+  margin-left: 8px;
+}
+
+.project-card h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.project-card-description {
+  max-width: 320px;
+  margin: 8px 0 0;
+  color: #77736a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.project-card-action {
+  margin-top: 18px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card:hover .project-card-visual::after {
+  background: transparent;
+}
+
+.project-card:hover .project-card-visual img {
   transform: scale(1.06);
+}
+
+.project-card:hover .project-card-arrow {
+  transform: translate(4px, -4px);
+}
+
+.project-card:focus-visible {
+  outline: 2px solid #df402d;
+  outline-offset: 8px;
+}
+
+@media (max-width: 800px) {
+  .works-page {
+    padding: 118px 20px 80px;
+  }
+
+  .works-heading {
+    display: block;
+    margin-bottom: 56px;
+  }
+
+  .works-heading h1 {
+    margin: 28px 0;
+  }
+
+  .works-intro {
+    max-width: 260px;
+  }
+
+  .works-layout {
+    gap: 48px 14px;
+  }
+
+  .project-card,
+  .project-card-featured {
+    grid-column: span 6;
+    grid-row: auto;
+  }
+
+  .project-card-featured {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 500px) {
+  .works-layout {
+    display: block;
+  }
+
+  .project-card {
+    margin-bottom: 48px;
+  }
+
+  .project-card-visual,
+  .project-card-featured .project-card-visual {
+    aspect-ratio: 1.2;
+  }
 }

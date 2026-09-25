@@ -1,0 +1,807 @@
+/* ========================================
+   HOME
+======================================== */
+
+.home-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+.home-logo {
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  z-index: 1;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.intro {
+    position: absolute;
+    top: 15%;
+    font-size: 1.2rem;
+}
+
+
+.intro-name {
+    color: #00ff11;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   CAT MOVEMENT
+======================================== */
+
+.home-cat-container {
+  position: absolute;
+
+  width: 130px;
+  height: 120px;
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+
+  z-index: 100;
+
+  transition:
+    left 2.2s linear,
+    top 2.2s linear;
+}
+
+
+.home-cat-direction {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transform-origin: center;
+}
+
+
+/* ========================================
+   PIXEL CAT
+======================================== */
+
+.home-pixel-cat {
+  position: relative;
+
+  width: 125px;
+  height: 110px;
+
+  image-rendering: pixelated;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+.home-cat-body {
+  position: absolute;
+
+  left: 34px;
+  top: 51px;
+
+  width: 58px;
+  height: 38px;
+
+  background: var(--cat-color);
+
+  z-index: 3;
+}
+
+
+/* 몸 윗부분 */
+
+.home-cat-body::before {
+  content: "";
+
+  position: absolute;
+
+  left: 5px;
+  top: -5px;
+
+  width: 48px;
+  height: 6px;
+
+  background: var(--cat-color);
+}
+
+
+/* 몸 아래쪽 */
+
+.home-cat-body::after {
+  content: "";
+
+  position: absolute;
+
+  left: 5px;
+  bottom: -4px;
+
+  width: 48px;
+  height: 5px;
+
+  background: var(--cat-color);
+}
+
+
+/* 배 부분 */
+
+.home-cat-belly {
+  position: absolute;
+
+  left: 8px;
+  bottom: 0;
+
+  width: 42px;
+  height: 8px;
+
+  background: var(--cat-color);
+}
+
+
+/* ========================================
+   BIG PIXEL HEAD
+======================================== */
+
+.home-cat-head {
+  position: absolute;
+
+  left: 40px;
+  top: 21px;
+
+  width: 51px;
+  height: 43px;
+
+  background: var(--cat-color);
+
+  z-index: 7;
+}
+
+.home-cat-round .home-cat-head {
+  left: 36px;
+  top: 19px;
+  width: 59px;
+  height: 47px;
+}
+
+.home-cat-round .home-cat-body {
+  left: 30px;
+  top: 52px;
+  width: 66px;
+  height: 40px;
+}
+
+.home-cat-pointy .home-cat-head {
+  left: 43px;
+  top: 24px;
+  width: 45px;
+  height: 40px;
+}
+
+.home-cat-pointy .home-cat-ear {
+  top: -21px;
+  width: 14px;
+  height: 22px;
+}
+
+.home-cat-pointy .home-cat-body {
+  left: 37px;
+  top: 52px;
+  width: 52px;
+  height: 43px;
+}
+
+.home-cat-fluffy .home-cat-head {
+  left: 35px;
+  top: 18px;
+  width: 61px;
+  height: 48px;
+}
+
+.home-cat-fluffy .home-cat-body {
+  left: 27px;
+  top: 52px;
+  width: 70px;
+  height: 43px;
+}
+
+.home-cat-fluffy .home-cat-tail {
+  left: 91px;
+  width: 40px;
+  height: 55px;
+}
+
+.home-cat-tiny .home-pixel-cat {
+  transform: scale(0.64);
+  transform-origin: center;
+}
+
+.home-cat-tiny.home-cat-walking .home-pixel-cat {
+  animation: homeTinyCatBounce 0.3s steps(2) infinite;
+}
+
+@keyframes homeTinyCatBounce {
+  0% {
+    transform: scale(0.64) translateY(0);
+  }
+
+  50% {
+    transform: scale(0.64) translateY(-3px);
+  }
+
+  100% {
+    transform: scale(0.64) translateY(0);
+  }
+}
+
+
+/* 얼굴 아래쪽을 살짝 좁게 */
+
+.home-cat-head::after {
+  content: "";
+
+  position: absolute;
+
+  left: 5px;
+  bottom: -5px;
+
+  width: 41px;
+  height: 6px;
+
+  background: var(--cat-color);
+}
+
+
+/* ========================================
+   EARS
+======================================== */
+
+.home-cat-ear {
+  position: absolute;
+
+  top: -16px;
+
+  width: 17px;
+  height: 18px;
+
+  background: var(--cat-color);
+}
+
+
+/* 귀 꼭대기 */
+
+.home-cat-ear::before {
+  content: "";
+
+  position: absolute;
+
+  top: -5px;
+
+  width: 8px;
+  height: 6px;
+
+  background: var(--cat-color);
+}
+
+
+.home-cat-ear-left {
+  left: 2px;
+}
+
+.home-cat-ear-left::before {
+  left: 0;
+}
+
+
+.home-cat-ear-right {
+  right: 2px;
+}
+
+.home-cat-ear-right::before {
+  right: 0;
+}
+
+
+/* 귀 안쪽 */
+
+.home-cat-inner-ear {
+  position: absolute;
+
+  top: 5px;
+  left: 5px;
+
+  width: 7px;
+  height: 8px;
+
+  background: #000;
+}
+
+
+/* ========================================
+   EYES
+======================================== */
+
+.home-cat-eye {
+  position: absolute;
+
+  top: 17px;
+
+  width: 6px;
+  height: 8px;
+
+  background: #000;
+}
+
+
+.home-cat-eye-left {
+  left: 11px;
+}
+
+
+.home-cat-eye-right {
+  right: 11px;
+}
+
+
+/* 눈 하이라이트 */
+
+.home-cat-eye::after {
+  content: "";
+
+  position: absolute;
+
+  top: 1px;
+  left: 1px;
+
+  width: 2px;
+  height: 2px;
+
+  background: var(--cat-color);
+}
+
+
+/* ========================================
+   NOSE
+======================================== */
+
+.home-cat-nose {
+  position: absolute;
+
+  left: 50%;
+  top: 29px;
+
+  width: 5px;
+  height: 4px;
+
+  background: #000;
+
+  transform: translateX(-50%);
+}
+
+
+/* 코 아래 작은 픽셀 */
+
+.home-cat-nose::after {
+  content: "";
+
+  position: absolute;
+
+  left: 2px;
+  top: 4px;
+
+  width: 2px;
+  height: 3px;
+
+  background: #000;
+}
+
+
+/* ========================================
+   WHISKERS
+======================================== */
+
+.home-cat-whisker {
+  position: absolute;
+
+  width: 13px;
+  height: 4px;
+
+  background: var(--cat-color);
+}
+
+
+.whisker-left-1 {
+  left: -13px;
+  top: 26px;
+}
+
+
+.whisker-left-2 {
+  left: -15px;
+  top: 34px;
+}
+
+
+.whisker-right-1 {
+  right: -13px;
+  top: 26px;
+}
+
+
+.whisker-right-2 {
+  right: -15px;
+  top: 34px;
+}
+
+
+/* ========================================
+   LEGS
+======================================== */
+
+.home-cat-leg {
+  position: absolute;
+
+  top: 84px;
+
+  width: 10px;
+  height: 18px;
+
+  background: var(--cat-color);
+
+  z-index: 2;
+
+  transform-origin: top center;
+}
+
+
+/* 발바닥은 아주 짧게 */
+
+.home-cat-leg::after {
+  content: "";
+
+  position: absolute;
+
+  left: -2px;
+  bottom: -3px;
+
+  width: 12px;
+  height: 4px;
+
+  background: var(--cat-color);
+}
+
+
+.home-cat-leg-1 {
+  left: 39px;
+}
+
+
+.home-cat-leg-2 {
+  left: 52px;
+}
+
+
+.home-cat-leg-3 {
+  left: 70px;
+}
+
+
+.home-cat-leg-4 {
+  left: 83px;
+}
+
+
+/* ========================================
+   TAIL
+======================================== */
+
+.home-cat-tail {
+  position: absolute;
+
+  left: 87px;
+  top: 54px;
+
+  width: 35px;
+  height: 48px;
+
+  z-index: 2;
+
+  transform-origin: 3px 31px;
+}
+
+
+.tail-block {
+  position: absolute;
+
+  background: var(--cat-color);
+}
+
+
+/* 몸에서 나오는 부분 */
+
+.tail-block-1 {
+  left: 0;
+  bottom: 10px;
+
+  width: 19px;
+  height: 8px;
+}
+
+
+/* 위로 올라감 */
+
+.tail-block-2 {
+  left: 14px;
+  bottom: 10px;
+
+  width: 8px;
+  height: 27px;
+}
+
+
+/* 오른쪽으로 꺾임 */
+
+.tail-block-3 {
+  left: 18px;
+  top: 6px;
+
+  width: 14px;
+  height: 8px;
+}
+
+
+/* 꼬리 끝 */
+
+.tail-block-4 {
+  left: 27px;
+  top: 0;
+
+  width: 8px;
+  height: 13px;
+}
+
+
+/* ========================================
+   WALKING BODY
+======================================== */
+
+.home-cat-walking .home-pixel-cat {
+  animation: homeCatBounce 0.3s steps(2) infinite;
+}
+
+
+@keyframes homeCatBounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ========================================
+   WALKING LEGS
+======================================== */
+
+.home-cat-walking .home-cat-leg-1,
+.home-cat-walking .home-cat-leg-3 {
+  animation: homeLegA 0.3s steps(2) infinite;
+}
+
+
+.home-cat-walking .home-cat-leg-2,
+.home-cat-walking .home-cat-leg-4 {
+  animation: homeLegB 0.3s steps(2) infinite;
+}
+
+
+@keyframes homeLegA {
+  0% {
+    transform: translateX(-3px);
+  }
+
+  50% {
+    transform:
+      translateX(4px)
+      translateY(-3px);
+  }
+
+  100% {
+    transform: translateX(-3px);
+  }
+}
+
+
+@keyframes homeLegB {
+  0% {
+    transform:
+      translateX(4px)
+      translateY(-3px);
+  }
+
+  50% {
+    transform: translateX(-3px);
+  }
+
+  100% {
+    transform:
+      translateX(4px)
+      translateY(-3px);
+  }
+}
+
+
+/* ========================================
+   TAIL ANIMATION
+======================================== */
+
+.home-cat-walking .home-cat-tail {
+  animation: homeTailWalk 0.6s steps(3) infinite;
+}
+
+
+@keyframes homeTailWalk {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+
+/* ========================================
+   CLICK
+======================================== */
+
+.home-cat-clicked .home-cat-direction {
+  animation: homeCatPop 0.45s steps(4);
+}
+
+
+@keyframes homeCatPop {
+  0% {
+    scale: 1;
+  }
+
+  30% {
+    scale: 0.8;
+  }
+
+  65% {
+    scale: 1.22;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+
+/* ========================================
+   PARTICLES
+======================================== */
+
+.home-cat-particle {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  z-index: 30;
+
+  color: var(--particle-color);
+
+  font-family: monospace;
+  font-size: 15px;
+
+  pointer-events: none;
+
+  animation: homeParticleBurst 0.75s steps(6) forwards;
+}
+
+
+@keyframes homeParticleBurst {
+  0% {
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.2);
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      translate(
+        var(--particle-x),
+        var(--particle-y)
+      )
+      scale(1.1);
+  }
+}
+
+
+/* ========================================
+   MEOW
+======================================== */
+
+.home-cat-meow {
+  position: absolute;
+
+  left: 50%;
+  top: -20px;
+
+  z-index: 40;
+
+  color: #fff;
+
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  animation: homeMeowPop 0.55s steps(4) forwards;
+}
+
+
+@keyframes homeMeowPop {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(8px);
+  }
+
+  35% {
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(-17px);
+  }
+}

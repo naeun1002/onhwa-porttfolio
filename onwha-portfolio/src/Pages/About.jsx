@@ -11,7 +11,7 @@ const programs = [
 
 function About() {
   return (
-    <main className="page-container">
+    <main className="page-container about-page">
       <h1>About</h1>
 
       <div className="about-layout">

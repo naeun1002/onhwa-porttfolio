@@ -25,6 +25,10 @@ function Header() {
     location.pathname.toLowerCase().replace(/\/+$/, "") || "/";
 
   const headerThemes = {
+    "/": {
+      backgroundColor : "#000000",
+      textColor: "#ffffff",
+    },
 
     "/project/artroad": {
       backgroundColor: "#d62828",

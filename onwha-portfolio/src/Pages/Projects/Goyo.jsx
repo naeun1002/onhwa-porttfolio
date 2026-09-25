@@ -807,6 +807,24 @@ function Goyo() {
 
                   <div className="goyo-appIcon-box">
                     <img
+                      className="goyo-appIcon-effect goyo-appIcon-effect01 goyo-appIcon-effect01-small"
+                      src="/images/goyoEffect01.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <img
+                      className="goyo-appIcon-effect goyo-appIcon-effect01 goyo-appIcon-effect01-large"
+                      src="/images/goyoEffect01.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <img
+                      className="goyo-appIcon-effect goyo-appIcon-effect02"
+                      src="/images/goyoEffect02.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                    <img
                       className="goyo-appIcon-img"
                       src="/images/goyoAppIcon.png"
                       alt="고요 앱 아이콘"

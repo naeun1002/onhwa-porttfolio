@@ -1,3 +1,26 @@
+.about-page {
+  --about-logo-top: 400px;
+  --about-logo-right: 300px;
+
+  position: relative;
+  isolation: isolate;
+}
+
+.about-page::before {
+  position: absolute;
+  top: var(--about-logo-top);
+  right: var(--about-logo-right);
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  background-image: url("/images/onwhaLogo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400px 400px;
+  content: "";
+  opacity: 0.85;
+}
+
 .about-layout {
   display: grid;
   grid-template-columns: 320px 1fr;

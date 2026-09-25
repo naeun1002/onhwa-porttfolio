@@ -4,7 +4,7 @@ import '../Styles/awards.css'
 function Awards() {
   const navigate = useNavigate();
   return (
-    <main className="page-container">
+    <main className="page-container awards-page">
       <h1>Awards</h1>
 
       <section className="awards-layout">
@@ -13,10 +13,8 @@ function Awards() {
             <div className="award-text">
               <h2 className="award-heading">
                 <span className="awards-name">
-                  Project 01 | 제3회 양자나노과학연구단 미술공모전 Qubit
+                  Project 01 | 제3회 양자나노과학연구단 미술공모전 Qubit 유튜브상
                 </span>
-
-                <span className="awards-grade">유튜브상</span>
               </h2>
 
               <p className="project-name">나를 마주하다</p>
@@ -32,10 +30,8 @@ function Awards() {
             <div className="award-text">
               <h2 className="award-heading">
                 <span className="awards-name">
-                  Project 02 | 제60회 대한민국디자인전람회
+                  Project 02 | 제60회 대한민국디자인전람회 입선
                 </span>
-
-                <span className="awards-grade">입선</span>
               </h2>
 
               <p className="project-name">시 리스팅 앱, 고요</p>
@@ -50,10 +46,8 @@ function Awards() {
             <div className="award-text">
               <h2 className="award-heading">
                 <span className="awards-name">
-                  Project 03 | 대학생 서비스 디자인 학회 공공서비스디자인 프로젝트
+                  Project 03 | 대학생 서비스 디자인 학회 공공서비스디자인 프로젝트 금상
                 </span>
-
-                <span className="awards-grade">금상</span>
               </h2>
 
               <p className="project-name">ARTROAD</p>
@@ -63,6 +57,7 @@ function Awards() {
           </div>
         </article>
 
+        {/*
         <article className="award-card">
           <div className="awards-visual">
             <div className="award-text">
@@ -94,6 +89,7 @@ function Awards() {
             </div>
           </div>
         </article>
+        */}
       </section>
     </main>
   )
